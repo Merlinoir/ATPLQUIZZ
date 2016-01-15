@@ -1,16 +1,25 @@
 <!doctype html>
-<html lang="en" ng-app="userModule">
+<html lang="en" ng-app="userModulApp">
 <head>
   <meta charset="utf-8">
   <title>My HTML File</title>
-  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
   <link rel="stylesheet" href="css/app.css">
   <script src="js/libs/angular.min.js"></script>
   <script src="js/libs/angular-route.min.js"></script>
+  <script src="js/controller/userController.js"></script>
 </head>
-<body>
+<body ng-controller="userListCtrl">
 
   <p>Nothing here {{'yet' + '!'}} VERSION TD6</p>
 
+<div ng-repeat = "phone in phones">
+{{phone.name}}</div>
+
+<ul class="phones">
+  <li ng-repeat="phone in phones | filter:query | orderBy:orderProp">
+    <span>{{phone.name}}</span>
+    <p>{{phone.snippet}}</p>
+  </li>
+</ul>
 </body>
 </html>
