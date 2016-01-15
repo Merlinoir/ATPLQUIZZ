@@ -26,7 +26,7 @@ public class UserRestController {
 	  public List<User> findAll(){
 	    // REQUETE
 	    List<User> users = this.jdbcTemplate.query(
-	        "select * from USER_TABLE",
+	        "select * from utilisateur",
 	        new RowMapper<User>() {
 	            public User mapRow(ResultSet rs, int rowNum) throws SQLException {
 	            	User user = new User();
@@ -48,7 +48,7 @@ public class UserRestController {
 	  public List<User> findById(@PathVariable String userID){
 	    // REQUETE
 	    List<User> users = this.jdbcTemplate.query(
-	        "select * from USER_TABLE where id="+userID,
+	        "select * from UTILISATEUR where id="+userID,
 	        new RowMapper<User>() {
 	            public User mapRow(ResultSet rs, int rowNum) throws SQLException {
 	            	User user = new User();
@@ -66,10 +66,10 @@ public class UserRestController {
 	        return users;
 	  }
 
-	  @RequestMapping(value="/{userID}/{nom}/{prenom}/{password}", method = RequestMethod.PUT)
+	  @RequestMapping(value="/{userID}/{nom}/{prenom}/{password}", method = RequestMethod.POST)
 	  public void createPerson(@PathVariable String userID, @PathVariable String nom, @PathVariable String prenom, @PathVariable String password){
 	    // REQUETE
-	    this.jdbcTemplate.update("insert into USER_TABLE (ID, NOM, PRENOM, PASSWORD) values (?,?,?)", new Object[]{userID, nom, prenom, password}, new Object[]{Types.VARCHAR, Types.VARCHAR, Types.VARCHAR, Types.VARCHAR});
+	    this.jdbcTemplate.update("insert into UTILISATEUR (ID, NOM, PRENOM, PASSWORD) values (?,?,?)", new Object[]{userID, nom, prenom, password}, new Object[]{Types.INTEGER, Types.VARCHAR, Types.VARCHAR, Types.VARCHAR});
 	  }
 
 }
