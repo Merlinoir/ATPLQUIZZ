@@ -1,6 +1,5 @@
 package com.restController;
 
-import com.application.Application;
 import com.entity.User;
 import org.springframework.web.bind.annotation.*;
 import org.apache.commons.logging.Log;
@@ -11,13 +10,12 @@ import java.util.*;
 import org.springframework.jdbc.core.RowMapper;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Types;
 
 @RestController
 @RequestMapping("/users")
 public class UserRestController {
 
-	private static Log log = LogFactory.getLog(Application.class);
+	private static Log log = LogFactory.getLog(UserRestController.class);
 
 	@Autowired
 	JdbcTemplate jdbcTemplate;
