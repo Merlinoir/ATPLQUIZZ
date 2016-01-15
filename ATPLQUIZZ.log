@@ -1356,3 +1356,520 @@ org.h2.jdbc.JdbcSQLException: Database is already closed (to disable automatic c
 	at org.springframework.context.support.AbstractApplicationContext$1.run(AbstractApplicationContext.java:807)
 
 2016-01-15 09:36:22.602  INFO 2908 --- [Thread-1] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2016-01-15 12:08:19.778  INFO 9228 --- [com.application.Application.main()] com.application.Application              : Starting Application on Kuba-Laptop with PID 9228 (c:\Users\Kuba\ProjetTutore\ATPLQUIZZ\target\classes started by Kuba in c:\Users\Kuba\ProjetTutore\ATPLQUIZZ)
+2016-01-15 12:08:19.832  INFO 9228 --- [com.application.Application.main()] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@376e4740: startup date [Fri Jan 15 12:08:19 CET 2016]; root of context hierarchy
+2016-01-15 12:08:20.976  INFO 9228 --- [com.application.Application.main()] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'beanNameViewResolver': replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter.class]]
+2016-01-15 12:08:22.044  INFO 9228 --- [com.application.Application.main()] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$86fb6050] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-01-15 12:08:22.077  INFO 9228 --- [com.application.Application.main()] trationDelegate$BeanPostProcessorChecker : Bean 'transactionAttributeSource' of type [class org.springframework.transaction.annotation.AnnotationTransactionAttributeSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-01-15 12:08:22.094  INFO 9228 --- [com.application.Application.main()] trationDelegate$BeanPostProcessorChecker : Bean 'transactionInterceptor' of type [class org.springframework.transaction.interceptor.TransactionInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-01-15 12:08:22.107  INFO 9228 --- [com.application.Application.main()] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.config.internalTransactionAdvisor' of type [class org.springframework.transaction.interceptor.BeanFactoryTransactionAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-01-15 12:08:23.064  INFO 9228 --- [com.application.Application.main()] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2016-01-15 12:08:23.368  INFO 9228 --- [com.application.Application.main()] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2016-01-15 12:08:23.370  INFO 9228 --- [com.application.Application.main()] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.0.28
+2016-01-15 12:08:23.532  INFO 9228 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2016-01-15 12:08:24.895  INFO 9228 --- [localhost-startStop-1] o.s.b.c.e.ServletRegistrationBean        : Mapping servlet: 'dispatcherServlet' to [/]
+2016-01-15 12:08:24.903  INFO 9228 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'metricFilter' to: [/*]
+2016-01-15 12:08:24.905  INFO 9228 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-01-15 12:08:24.906  INFO 9228 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-01-15 12:08:24.907  INFO 9228 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'webRequestLoggingFilter' to: [/*]
+2016-01-15 12:08:24.908  INFO 9228 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'applicationContextIdFilter' to: [/*]
+2016-01-15 12:08:25.655  INFO 9228 --- [com.application.Application.main()] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-01-15 12:08:25.674  INFO 9228 --- [com.application.Application.main()] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-01-15 12:08:25.813  INFO 9228 --- [com.application.Application.main()] org.hibernate.Version                    : HHH000412: Hibernate Core {4.3.11.Final}
+2016-01-15 12:08:25.820  INFO 9228 --- [com.application.Application.main()] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2016-01-15 12:08:25.824  INFO 9228 --- [com.application.Application.main()] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2016-01-15 12:08:26.177  INFO 9228 --- [com.application.Application.main()] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2016-01-15 12:08:26.324  INFO 9228 --- [com.application.Application.main()] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2016-01-15 12:08:26.415  INFO 9228 --- [com.application.Application.main()] o.h.h.i.ast.ASTQueryTranslatorFactory    : HHH000397: Using ASTQueryTranslatorFactory
+2016-01-15 12:08:26.575  INFO 9228 --- [com.application.Application.main()] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2016-01-15 12:08:26.577  INFO 9228 --- [com.application.Application.main()] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2016-01-15 12:08:28.161  INFO 9228 --- [com.application.Application.main()] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/trace],methods=[GET]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-01-15 12:08:28.162  INFO 9228 --- [com.application.Application.main()] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/dump],methods=[GET]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-01-15 12:08:28.166  INFO 9228 --- [com.application.Application.main()] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/beans],methods=[GET]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-01-15 12:08:28.168  INFO 9228 --- [com.application.Application.main()] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env/{name:.*}],methods=[GET]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+2016-01-15 12:08:28.168  INFO 9228 --- [com.application.Application.main()] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env],methods=[GET]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-01-15 12:08:28.170  INFO 9228 --- [com.application.Application.main()] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/autoconfig],methods=[GET]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-01-15 12:08:28.172  INFO 9228 --- [com.application.Application.main()] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics/{name:.*}],methods=[GET]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+2016-01-15 12:08:28.173  INFO 9228 --- [com.application.Application.main()] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics],methods=[GET]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-01-15 12:08:28.174  INFO 9228 --- [com.application.Application.main()] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/mappings],methods=[GET]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-01-15 12:08:28.179  INFO 9228 --- [com.application.Application.main()] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/health]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(java.security.Principal)
+2016-01-15 12:08:28.182  INFO 9228 --- [com.application.Application.main()] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/info],methods=[GET]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-01-15 12:08:28.183  INFO 9228 --- [com.application.Application.main()] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/configprops],methods=[GET]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-01-15 12:08:28.303  INFO 9228 --- [com.application.Application.main()] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2016-01-15 12:08:28.317  INFO 9228 --- [com.application.Application.main()] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 0
+2016-01-15 12:08:28.686  INFO 9228 --- [com.application.Application.main()] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2016-01-15 12:08:28.689  INFO 9228 --- [com.application.Application.main()] com.application.Application              : Started Application in 9.372 seconds (JVM running for 17.212)
+2016-01-15 12:08:34.373  INFO 9228 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-01-15 12:08:34.904 ERROR 9228 --- [http-nio-8080-exec-5] o.a.c.c.C.[Tomcat].[localhost]           : Exception Processing ErrorPage[errorCode=0, location=/error]
+
+org.apache.catalina.connector.ClientAbortException: java.io.IOException: Une connexion établie a été abandonnée par un logiciel de votre ordinateur hôte
+	at org.apache.catalina.connector.OutputBuffer.realWriteBytes(OutputBuffer.java:393)
+	at org.apache.tomcat.util.buf.ByteChunk.flushBuffer(ByteChunk.java:426)
+	at org.apache.catalina.connector.OutputBuffer.doFlush(OutputBuffer.java:342)
+	at org.apache.catalina.connector.OutputBuffer.flush(OutputBuffer.java:317)
+	at org.apache.catalina.connector.CoyoteOutputStream.flush(CoyoteOutputStream.java:110)
+	at com.fasterxml.jackson.core.json.UTF8JsonGenerator.flush(UTF8JsonGenerator.java:1039)
+	at com.fasterxml.jackson.databind.ObjectMapper.writeValue(ObjectMapper.java:1904)
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.writeInternal(AbstractJackson2HttpMessageConverter.java:231)
+	at org.springframework.http.converter.AbstractHttpMessageConverter.write(AbstractHttpMessageConverter.java:208)
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor.writeWithMessageConverters(AbstractMessageConverterMethodProcessor.java:186)
+	at org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.handleReturnValue(HttpEntityMethodProcessor.java:146)
+	at org.springframework.web.method.support.HandlerMethodReturnValueHandlerComposite.handleReturnValue(HandlerMethodReturnValueHandlerComposite.java:71)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:126)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:775)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:705)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:959)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:893)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:967)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:858)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:843)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:720)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:468)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:391)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:318)
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:439)
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:305)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:182)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:88)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:518)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1091)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:673)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1500)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1456)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:744)
+Caused by: java.io.IOException: Une connexion établie a été abandonnée par un logiciel de votre ordinateur hôte
+	at sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:51)
+	at sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:93)
+	at sun.nio.ch.IOUtil.write(IOUtil.java:65)
+	at sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:466)
+	at org.apache.tomcat.util.net.NioChannel.write(NioChannel.java:124)
+	at org.apache.tomcat.util.net.NioBlockingSelector.write(NioBlockingSelector.java:101)
+	at org.apache.tomcat.util.net.NioSelectorPool.write(NioSelectorPool.java:172)
+	at org.apache.coyote.http11.InternalNioOutputBuffer.writeToSocket(InternalNioOutputBuffer.java:139)
+	at org.apache.coyote.http11.InternalNioOutputBuffer.addToBB(InternalNioOutputBuffer.java:197)
+	at org.apache.coyote.http11.InternalNioOutputBuffer.access$000(InternalNioOutputBuffer.java:41)
+	at org.apache.coyote.http11.InternalNioOutputBuffer$SocketOutputBuffer.doWrite(InternalNioOutputBuffer.java:320)
+	at org.apache.coyote.http11.filters.ChunkedOutputFilter.doWrite(ChunkedOutputFilter.java:121)
+	at org.apache.coyote.http11.AbstractOutputBuffer.doWrite(AbstractOutputBuffer.java:256)
+	at org.apache.coyote.Response.doWrite(Response.java:501)
+	at org.apache.catalina.connector.OutputBuffer.realWriteBytes(OutputBuffer.java:388)
+	... 42 common frames omitted
+
+2016-01-15 13:21:19.313  INFO 2600 --- [com.application.Application.main()] com.application.Application              : Starting Application on Kuba-Laptop with PID 2600 (c:\Users\Kuba\ProjetTutore\ATPLQUIZZ\target\classes started by Kuba in c:\Users\Kuba\ProjetTutore\ATPLQUIZZ)
+2016-01-15 13:21:19.366  INFO 2600 --- [com.application.Application.main()] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@5f1b4b7b: startup date [Fri Jan 15 13:21:19 CET 2016]; root of context hierarchy
+2016-01-15 13:21:20.424  INFO 2600 --- [com.application.Application.main()] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'beanNameViewResolver': replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter.class]]
+2016-01-15 13:21:21.617  INFO 2600 --- [com.application.Application.main()] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$28a30138] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-01-15 13:21:21.664  INFO 2600 --- [com.application.Application.main()] trationDelegate$BeanPostProcessorChecker : Bean 'transactionAttributeSource' of type [class org.springframework.transaction.annotation.AnnotationTransactionAttributeSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-01-15 13:21:21.685  INFO 2600 --- [com.application.Application.main()] trationDelegate$BeanPostProcessorChecker : Bean 'transactionInterceptor' of type [class org.springframework.transaction.interceptor.TransactionInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-01-15 13:21:21.698  INFO 2600 --- [com.application.Application.main()] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.config.internalTransactionAdvisor' of type [class org.springframework.transaction.interceptor.BeanFactoryTransactionAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-01-15 13:21:22.206  INFO 2600 --- [com.application.Application.main()] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2016-01-15 13:21:22.473  INFO 2600 --- [com.application.Application.main()] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2016-01-15 13:21:22.475  INFO 2600 --- [com.application.Application.main()] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.0.28
+2016-01-15 13:21:22.628  INFO 2600 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2016-01-15 13:21:23.787  INFO 2600 --- [localhost-startStop-1] o.s.b.c.e.ServletRegistrationBean        : Mapping servlet: 'dispatcherServlet' to [/]
+2016-01-15 13:21:23.792  INFO 2600 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'metricFilter' to: [/*]
+2016-01-15 13:21:23.793  INFO 2600 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-01-15 13:21:23.794  INFO 2600 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-01-15 13:21:23.795  INFO 2600 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'webRequestLoggingFilter' to: [/*]
+2016-01-15 13:21:23.798  INFO 2600 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'applicationContextIdFilter' to: [/*]
+2016-01-15 13:21:24.460  INFO 2600 --- [com.application.Application.main()] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-01-15 13:21:24.479  INFO 2600 --- [com.application.Application.main()] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-01-15 13:21:24.620  INFO 2600 --- [com.application.Application.main()] org.hibernate.Version                    : HHH000412: Hibernate Core {4.3.11.Final}
+2016-01-15 13:21:24.627  INFO 2600 --- [com.application.Application.main()] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2016-01-15 13:21:24.630  INFO 2600 --- [com.application.Application.main()] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2016-01-15 13:21:24.875  INFO 2600 --- [com.application.Application.main()] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2016-01-15 13:21:24.973  INFO 2600 --- [com.application.Application.main()] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2016-01-15 13:21:25.440  INFO 2600 --- [com.application.Application.main()] o.h.h.i.ast.ASTQueryTranslatorFactory    : HHH000397: Using ASTQueryTranslatorFactory
+2016-01-15 13:21:25.591  INFO 2600 --- [com.application.Application.main()] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2016-01-15 13:21:25.595  INFO 2600 --- [com.application.Application.main()] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2016-01-15 13:21:27.061  INFO 2600 --- [com.application.Application.main()] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/beans],methods=[GET]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-01-15 13:21:27.065  INFO 2600 --- [com.application.Application.main()] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/dump],methods=[GET]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-01-15 13:21:27.066  INFO 2600 --- [com.application.Application.main()] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/info],methods=[GET]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-01-15 13:21:27.068  INFO 2600 --- [com.application.Application.main()] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/mappings],methods=[GET]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-01-15 13:21:27.069  INFO 2600 --- [com.application.Application.main()] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/trace],methods=[GET]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-01-15 13:21:27.071  INFO 2600 --- [com.application.Application.main()] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/health]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(java.security.Principal)
+2016-01-15 13:21:27.073  INFO 2600 --- [com.application.Application.main()] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/autoconfig],methods=[GET]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-01-15 13:21:27.075  INFO 2600 --- [com.application.Application.main()] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env/{name:.*}],methods=[GET]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+2016-01-15 13:21:27.077  INFO 2600 --- [com.application.Application.main()] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env],methods=[GET]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-01-15 13:21:27.078  INFO 2600 --- [com.application.Application.main()] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/configprops],methods=[GET]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-01-15 13:21:27.082  INFO 2600 --- [com.application.Application.main()] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics/{name:.*}],methods=[GET]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+2016-01-15 13:21:27.084  INFO 2600 --- [com.application.Application.main()] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics],methods=[GET]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-01-15 13:21:27.186  INFO 2600 --- [com.application.Application.main()] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2016-01-15 13:21:27.202  INFO 2600 --- [com.application.Application.main()] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 0
+2016-01-15 13:21:27.473  INFO 2600 --- [com.application.Application.main()] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2016-01-15 13:21:27.476  INFO 2600 --- [com.application.Application.main()] com.application.Application              : Started Application in 8.522 seconds (JVM running for 15.165)
+2016-01-15 13:21:35.318  INFO 2600 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-01-15 13:21:36.022 ERROR 2600 --- [http-nio-8080-exec-6] o.a.c.c.C.[Tomcat].[localhost]           : Exception Processing ErrorPage[errorCode=0, location=/error]
+
+org.apache.catalina.connector.ClientAbortException: java.io.IOException: Une connexion établie a été abandonnée par un logiciel de votre ordinateur hôte
+	at org.apache.catalina.connector.OutputBuffer.realWriteBytes(OutputBuffer.java:393)
+	at org.apache.tomcat.util.buf.ByteChunk.flushBuffer(ByteChunk.java:426)
+	at org.apache.catalina.connector.OutputBuffer.doFlush(OutputBuffer.java:342)
+	at org.apache.catalina.connector.OutputBuffer.flush(OutputBuffer.java:317)
+	at org.apache.catalina.connector.CoyoteOutputStream.flush(CoyoteOutputStream.java:110)
+	at com.fasterxml.jackson.core.json.UTF8JsonGenerator.flush(UTF8JsonGenerator.java:1039)
+	at com.fasterxml.jackson.databind.ObjectMapper.writeValue(ObjectMapper.java:1904)
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.writeInternal(AbstractJackson2HttpMessageConverter.java:231)
+	at org.springframework.http.converter.AbstractHttpMessageConverter.write(AbstractHttpMessageConverter.java:208)
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor.writeWithMessageConverters(AbstractMessageConverterMethodProcessor.java:186)
+	at org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.handleReturnValue(HttpEntityMethodProcessor.java:146)
+	at org.springframework.web.method.support.HandlerMethodReturnValueHandlerComposite.handleReturnValue(HandlerMethodReturnValueHandlerComposite.java:71)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:126)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:775)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:705)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:959)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:893)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:967)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:858)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:843)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:720)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:468)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:391)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:318)
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:439)
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:305)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:182)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:88)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:518)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1091)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:673)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1500)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1456)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:744)
+Caused by: java.io.IOException: Une connexion établie a été abandonnée par un logiciel de votre ordinateur hôte
+	at sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:51)
+	at sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:93)
+	at sun.nio.ch.IOUtil.write(IOUtil.java:65)
+	at sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:466)
+	at org.apache.tomcat.util.net.NioChannel.write(NioChannel.java:124)
+	at org.apache.tomcat.util.net.NioBlockingSelector.write(NioBlockingSelector.java:101)
+	at org.apache.tomcat.util.net.NioSelectorPool.write(NioSelectorPool.java:172)
+	at org.apache.coyote.http11.InternalNioOutputBuffer.writeToSocket(InternalNioOutputBuffer.java:139)
+	at org.apache.coyote.http11.InternalNioOutputBuffer.addToBB(InternalNioOutputBuffer.java:197)
+	at org.apache.coyote.http11.InternalNioOutputBuffer.access$000(InternalNioOutputBuffer.java:41)
+	at org.apache.coyote.http11.InternalNioOutputBuffer$SocketOutputBuffer.doWrite(InternalNioOutputBuffer.java:320)
+	at org.apache.coyote.http11.filters.ChunkedOutputFilter.doWrite(ChunkedOutputFilter.java:121)
+	at org.apache.coyote.http11.AbstractOutputBuffer.doWrite(AbstractOutputBuffer.java:256)
+	at org.apache.coyote.Response.doWrite(Response.java:501)
+	at org.apache.catalina.connector.OutputBuffer.realWriteBytes(OutputBuffer.java:388)
+	... 42 common frames omitted
+
+2016-01-15 14:11:55.095  INFO 4352 --- [com.application.Application.main()] com.application.Application              : Starting Application on Kuba-Laptop with PID 4352 (c:\Users\Kuba\ProjetTutore\ATPLQUIZZ\target\classes started by Kuba in c:\Users\Kuba\ProjetTutore\ATPLQUIZZ)
+2016-01-15 14:11:55.163  INFO 4352 --- [com.application.Application.main()] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@740ea102: startup date [Fri Jan 15 14:11:55 CET 2016]; root of context hierarchy
+2016-01-15 14:11:56.868  INFO 4352 --- [com.application.Application.main()] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'beanNameViewResolver': replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter.class]]
+2016-01-15 14:11:58.680  INFO 4352 --- [com.application.Application.main()] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$7b4b5cc4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-01-15 14:11:58.761  INFO 4352 --- [com.application.Application.main()] trationDelegate$BeanPostProcessorChecker : Bean 'transactionAttributeSource' of type [class org.springframework.transaction.annotation.AnnotationTransactionAttributeSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-01-15 14:11:58.793  INFO 4352 --- [com.application.Application.main()] trationDelegate$BeanPostProcessorChecker : Bean 'transactionInterceptor' of type [class org.springframework.transaction.interceptor.TransactionInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-01-15 14:11:58.826  INFO 4352 --- [com.application.Application.main()] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.config.internalTransactionAdvisor' of type [class org.springframework.transaction.interceptor.BeanFactoryTransactionAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-01-15 14:11:59.681  INFO 4352 --- [com.application.Application.main()] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2016-01-15 14:12:00.000  INFO 4352 --- [com.application.Application.main()] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2016-01-15 14:12:00.012  INFO 4352 --- [com.application.Application.main()] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.0.28
+2016-01-15 14:12:00.353  INFO 4352 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2016-01-15 14:12:02.223  INFO 4352 --- [localhost-startStop-1] o.s.b.c.e.ServletRegistrationBean        : Mapping servlet: 'dispatcherServlet' to [/]
+2016-01-15 14:12:02.239  INFO 4352 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'metricFilter' to: [/*]
+2016-01-15 14:12:02.262  INFO 4352 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-01-15 14:12:02.273  INFO 4352 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-01-15 14:12:02.299  INFO 4352 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'webRequestLoggingFilter' to: [/*]
+2016-01-15 14:12:02.309  INFO 4352 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'applicationContextIdFilter' to: [/*]
+2016-01-15 14:12:03.344  INFO 4352 --- [com.application.Application.main()] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-01-15 14:12:03.404  INFO 4352 --- [com.application.Application.main()] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-01-15 14:12:03.570  INFO 4352 --- [com.application.Application.main()] org.hibernate.Version                    : HHH000412: Hibernate Core {4.3.11.Final}
+2016-01-15 14:12:03.585  INFO 4352 --- [com.application.Application.main()] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2016-01-15 14:12:03.598  INFO 4352 --- [com.application.Application.main()] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2016-01-15 14:12:04.354  INFO 4352 --- [com.application.Application.main()] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2016-01-15 14:12:04.485  INFO 4352 --- [com.application.Application.main()] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2016-01-15 14:12:04.573  INFO 4352 --- [com.application.Application.main()] o.h.h.i.ast.ASTQueryTranslatorFactory    : HHH000397: Using ASTQueryTranslatorFactory
+2016-01-15 14:12:04.780  INFO 4352 --- [com.application.Application.main()] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2016-01-15 14:12:04.783  INFO 4352 --- [com.application.Application.main()] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2016-01-15 14:12:06.515  INFO 4352 --- [com.application.Application.main()] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/info],methods=[GET]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-01-15 14:12:06.572  INFO 4352 --- [com.application.Application.main()] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/health]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(java.security.Principal)
+2016-01-15 14:12:06.651  INFO 4352 --- [com.application.Application.main()] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env/{name:.*}],methods=[GET]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+2016-01-15 14:12:06.696  INFO 4352 --- [com.application.Application.main()] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env],methods=[GET]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-01-15 14:12:06.734  INFO 4352 --- [com.application.Application.main()] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/trace],methods=[GET]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-01-15 14:12:06.776  INFO 4352 --- [com.application.Application.main()] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics/{name:.*}],methods=[GET]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+2016-01-15 14:12:06.825  INFO 4352 --- [com.application.Application.main()] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics],methods=[GET]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-01-15 14:12:06.863  INFO 4352 --- [com.application.Application.main()] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/autoconfig],methods=[GET]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-01-15 14:12:06.871  INFO 4352 --- [com.application.Application.main()] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/mappings],methods=[GET]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-01-15 14:12:06.873  INFO 4352 --- [com.application.Application.main()] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/beans],methods=[GET]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-01-15 14:12:06.875  INFO 4352 --- [com.application.Application.main()] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/dump],methods=[GET]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-01-15 14:12:06.877  INFO 4352 --- [com.application.Application.main()] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/configprops],methods=[GET]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-01-15 14:12:07.081  INFO 4352 --- [com.application.Application.main()] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2016-01-15 14:12:07.112  INFO 4352 --- [com.application.Application.main()] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 0
+2016-01-15 14:12:07.509  INFO 4352 --- [com.application.Application.main()] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2016-01-15 14:12:07.511  INFO 4352 --- [com.application.Application.main()] com.application.Application              : Started Application in 12.823 seconds (JVM running for 22.461)
+2016-01-15 14:12:39.664  INFO 4352 --- [http-nio-8080-exec-5] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-01-15 14:12:40.244 ERROR 4352 --- [http-nio-8080-exec-6] o.a.c.c.C.[Tomcat].[localhost]           : Exception Processing ErrorPage[errorCode=0, location=/error]
+
+org.apache.catalina.connector.ClientAbortException: java.io.IOException: Une connexion établie a été abandonnée par un logiciel de votre ordinateur hôte
+	at org.apache.catalina.connector.OutputBuffer.realWriteBytes(OutputBuffer.java:393)
+	at org.apache.tomcat.util.buf.ByteChunk.flushBuffer(ByteChunk.java:426)
+	at org.apache.catalina.connector.OutputBuffer.doFlush(OutputBuffer.java:342)
+	at org.apache.catalina.connector.OutputBuffer.flush(OutputBuffer.java:317)
+	at org.apache.catalina.connector.CoyoteOutputStream.flush(CoyoteOutputStream.java:110)
+	at com.fasterxml.jackson.core.json.UTF8JsonGenerator.flush(UTF8JsonGenerator.java:1039)
+	at com.fasterxml.jackson.databind.ObjectMapper.writeValue(ObjectMapper.java:1904)
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.writeInternal(AbstractJackson2HttpMessageConverter.java:231)
+	at org.springframework.http.converter.AbstractHttpMessageConverter.write(AbstractHttpMessageConverter.java:208)
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor.writeWithMessageConverters(AbstractMessageConverterMethodProcessor.java:186)
+	at org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.handleReturnValue(HttpEntityMethodProcessor.java:146)
+	at org.springframework.web.method.support.HandlerMethodReturnValueHandlerComposite.handleReturnValue(HandlerMethodReturnValueHandlerComposite.java:71)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:126)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:775)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:705)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:959)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:893)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:967)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:858)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:843)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:720)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:468)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:391)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:318)
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:439)
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:305)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:182)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:88)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:518)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1091)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:673)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1500)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1456)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:744)
+Caused by: java.io.IOException: Une connexion établie a été abandonnée par un logiciel de votre ordinateur hôte
+	at sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:51)
+	at sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:93)
+	at sun.nio.ch.IOUtil.write(IOUtil.java:65)
+	at sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:466)
+	at org.apache.tomcat.util.net.NioChannel.write(NioChannel.java:124)
+	at org.apache.tomcat.util.net.NioBlockingSelector.write(NioBlockingSelector.java:101)
+	at org.apache.tomcat.util.net.NioSelectorPool.write(NioSelectorPool.java:172)
+	at org.apache.coyote.http11.InternalNioOutputBuffer.writeToSocket(InternalNioOutputBuffer.java:139)
+	at org.apache.coyote.http11.InternalNioOutputBuffer.addToBB(InternalNioOutputBuffer.java:197)
+	at org.apache.coyote.http11.InternalNioOutputBuffer.access$000(InternalNioOutputBuffer.java:41)
+	at org.apache.coyote.http11.InternalNioOutputBuffer$SocketOutputBuffer.doWrite(InternalNioOutputBuffer.java:320)
+	at org.apache.coyote.http11.filters.ChunkedOutputFilter.doWrite(ChunkedOutputFilter.java:121)
+	at org.apache.coyote.http11.AbstractOutputBuffer.doWrite(AbstractOutputBuffer.java:256)
+	at org.apache.coyote.Response.doWrite(Response.java:501)
+	at org.apache.catalina.connector.OutputBuffer.realWriteBytes(OutputBuffer.java:388)
+	... 42 common frames omitted
+
+2016-01-15 14:15:33.855  INFO 4768 --- [com.application.Application.main()] com.application.Application              : Starting Application on Kuba-Laptop with PID 4768 (c:\Users\Kuba\ProjetTutore\ATPLQUIZZ\target\classes started by Kuba in c:\Users\Kuba\ProjetTutore\ATPLQUIZZ)
+2016-01-15 14:15:33.947  INFO 4768 --- [com.application.Application.main()] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@e81673d: startup date [Fri Jan 15 14:15:33 CET 2016]; root of context hierarchy
+2016-01-15 14:15:35.217  INFO 4768 --- [com.application.Application.main()] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'beanNameViewResolver': replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter.class]]
+2016-01-15 14:15:36.356  INFO 4768 --- [com.application.Application.main()] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$6d123517] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-01-15 14:15:36.393  INFO 4768 --- [com.application.Application.main()] trationDelegate$BeanPostProcessorChecker : Bean 'transactionAttributeSource' of type [class org.springframework.transaction.annotation.AnnotationTransactionAttributeSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-01-15 14:15:36.415  INFO 4768 --- [com.application.Application.main()] trationDelegate$BeanPostProcessorChecker : Bean 'transactionInterceptor' of type [class org.springframework.transaction.interceptor.TransactionInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-01-15 14:15:36.424  INFO 4768 --- [com.application.Application.main()] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.config.internalTransactionAdvisor' of type [class org.springframework.transaction.interceptor.BeanFactoryTransactionAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-01-15 14:15:36.939  INFO 4768 --- [com.application.Application.main()] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2016-01-15 14:15:37.184  INFO 4768 --- [com.application.Application.main()] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2016-01-15 14:15:37.186  INFO 4768 --- [com.application.Application.main()] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.0.28
+2016-01-15 14:15:37.407  INFO 4768 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2016-01-15 14:15:39.044  INFO 4768 --- [localhost-startStop-1] o.s.b.c.e.ServletRegistrationBean        : Mapping servlet: 'dispatcherServlet' to [/]
+2016-01-15 14:15:39.051  INFO 4768 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'metricFilter' to: [/*]
+2016-01-15 14:15:39.053  INFO 4768 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-01-15 14:15:39.053  INFO 4768 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-01-15 14:15:39.054  INFO 4768 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'webRequestLoggingFilter' to: [/*]
+2016-01-15 14:15:39.055  INFO 4768 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'applicationContextIdFilter' to: [/*]
+2016-01-15 14:15:39.760  INFO 4768 --- [com.application.Application.main()] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-01-15 14:15:39.780  INFO 4768 --- [com.application.Application.main()] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-01-15 14:15:39.910  INFO 4768 --- [com.application.Application.main()] org.hibernate.Version                    : HHH000412: Hibernate Core {4.3.11.Final}
+2016-01-15 14:15:39.914  INFO 4768 --- [com.application.Application.main()] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2016-01-15 14:15:39.918  INFO 4768 --- [com.application.Application.main()] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2016-01-15 14:15:40.263  INFO 4768 --- [com.application.Application.main()] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2016-01-15 14:15:40.380  INFO 4768 --- [com.application.Application.main()] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2016-01-15 14:15:40.480  INFO 4768 --- [com.application.Application.main()] o.h.h.i.ast.ASTQueryTranslatorFactory    : HHH000397: Using ASTQueryTranslatorFactory
+2016-01-15 14:15:40.675  INFO 4768 --- [com.application.Application.main()] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2016-01-15 14:15:40.678  INFO 4768 --- [com.application.Application.main()] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2016-01-15 14:15:41.831  INFO 4768 --- [com.application.Application.main()] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/info],methods=[GET]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-01-15 14:15:41.832  INFO 4768 --- [com.application.Application.main()] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/mappings],methods=[GET]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-01-15 14:15:41.834  INFO 4768 --- [com.application.Application.main()] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/autoconfig],methods=[GET]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-01-15 14:15:41.835  INFO 4768 --- [com.application.Application.main()] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/configprops],methods=[GET]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-01-15 14:15:41.836  INFO 4768 --- [com.application.Application.main()] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/trace],methods=[GET]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-01-15 14:15:41.838  INFO 4768 --- [com.application.Application.main()] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics/{name:.*}],methods=[GET]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+2016-01-15 14:15:41.839  INFO 4768 --- [com.application.Application.main()] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics],methods=[GET]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-01-15 14:15:41.840  INFO 4768 --- [com.application.Application.main()] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/health]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(java.security.Principal)
+2016-01-15 14:15:41.842  INFO 4768 --- [com.application.Application.main()] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/beans],methods=[GET]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-01-15 14:15:41.843  INFO 4768 --- [com.application.Application.main()] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env/{name:.*}],methods=[GET]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+2016-01-15 14:15:41.844  INFO 4768 --- [com.application.Application.main()] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env],methods=[GET]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-01-15 14:15:41.845  INFO 4768 --- [com.application.Application.main()] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/dump],methods=[GET]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-01-15 14:15:41.948  INFO 4768 --- [com.application.Application.main()] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2016-01-15 14:15:41.961  INFO 4768 --- [com.application.Application.main()] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 0
+2016-01-15 14:15:42.146  INFO 4768 --- [com.application.Application.main()] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2016-01-15 14:15:42.148  INFO 4768 --- [com.application.Application.main()] com.application.Application              : Started Application in 8.651 seconds (JVM running for 16.832)
+2016-01-15 14:15:48.014  INFO 4768 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-01-15 14:20:55.701  INFO 9324 --- [com.application.Application.main()] com.application.Application              : Starting Application on Kuba-Laptop with PID 9324 (c:\Users\Kuba\ProjetTutore\ATPLQUIZZ\target\classes started by Kuba in c:\Users\Kuba\ProjetTutore\ATPLQUIZZ)
+2016-01-15 14:20:55.757  INFO 9324 --- [com.application.Application.main()] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@62a12a48: startup date [Fri Jan 15 14:20:55 CET 2016]; root of context hierarchy
+2016-01-15 14:20:56.831  INFO 9324 --- [com.application.Application.main()] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'beanNameViewResolver': replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter.class]]
+2016-01-15 14:20:58.142  INFO 9324 --- [com.application.Application.main()] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$77bab83e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-01-15 14:20:58.180  INFO 9324 --- [com.application.Application.main()] trationDelegate$BeanPostProcessorChecker : Bean 'transactionAttributeSource' of type [class org.springframework.transaction.annotation.AnnotationTransactionAttributeSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-01-15 14:20:58.196  INFO 9324 --- [com.application.Application.main()] trationDelegate$BeanPostProcessorChecker : Bean 'transactionInterceptor' of type [class org.springframework.transaction.interceptor.TransactionInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-01-15 14:20:58.210  INFO 9324 --- [com.application.Application.main()] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.config.internalTransactionAdvisor' of type [class org.springframework.transaction.interceptor.BeanFactoryTransactionAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-01-15 14:20:58.739  INFO 9324 --- [com.application.Application.main()] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2016-01-15 14:20:59.006  INFO 9324 --- [com.application.Application.main()] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2016-01-15 14:20:59.008  INFO 9324 --- [com.application.Application.main()] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.0.28
+2016-01-15 14:20:59.144  INFO 9324 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2016-01-15 14:21:00.414  INFO 9324 --- [localhost-startStop-1] o.s.b.c.e.ServletRegistrationBean        : Mapping servlet: 'dispatcherServlet' to [/]
+2016-01-15 14:21:00.423  INFO 9324 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'metricFilter' to: [/*]
+2016-01-15 14:21:00.424  INFO 9324 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-01-15 14:21:00.424  INFO 9324 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-01-15 14:21:00.425  INFO 9324 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'webRequestLoggingFilter' to: [/*]
+2016-01-15 14:21:00.427  INFO 9324 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'applicationContextIdFilter' to: [/*]
+2016-01-15 14:21:01.216  INFO 9324 --- [com.application.Application.main()] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-01-15 14:21:01.238  INFO 9324 --- [com.application.Application.main()] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-01-15 14:21:01.368  INFO 9324 --- [com.application.Application.main()] org.hibernate.Version                    : HHH000412: Hibernate Core {4.3.11.Final}
+2016-01-15 14:21:01.377  INFO 9324 --- [com.application.Application.main()] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2016-01-15 14:21:01.382  INFO 9324 --- [com.application.Application.main()] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2016-01-15 14:21:01.673  INFO 9324 --- [com.application.Application.main()] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2016-01-15 14:21:02.228  INFO 9324 --- [com.application.Application.main()] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2016-01-15 14:21:02.309  INFO 9324 --- [com.application.Application.main()] o.h.h.i.ast.ASTQueryTranslatorFactory    : HHH000397: Using ASTQueryTranslatorFactory
+2016-01-15 14:21:02.482  INFO 9324 --- [com.application.Application.main()] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2016-01-15 14:21:02.485  INFO 9324 --- [com.application.Application.main()] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2016-01-15 14:21:04.039  INFO 9324 --- [com.application.Application.main()] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/mappings],methods=[GET]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-01-15 14:21:04.040  INFO 9324 --- [com.application.Application.main()] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/beans],methods=[GET]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-01-15 14:21:04.044  INFO 9324 --- [com.application.Application.main()] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics/{name:.*}],methods=[GET]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+2016-01-15 14:21:04.045  INFO 9324 --- [com.application.Application.main()] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics],methods=[GET]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-01-15 14:21:04.046  INFO 9324 --- [com.application.Application.main()] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/trace],methods=[GET]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-01-15 14:21:04.048  INFO 9324 --- [com.application.Application.main()] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/info],methods=[GET]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-01-15 14:21:04.049  INFO 9324 --- [com.application.Application.main()] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/dump],methods=[GET]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-01-15 14:21:04.051  INFO 9324 --- [com.application.Application.main()] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/autoconfig],methods=[GET]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-01-15 14:21:04.053  INFO 9324 --- [com.application.Application.main()] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env/{name:.*}],methods=[GET]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+2016-01-15 14:21:04.055  INFO 9324 --- [com.application.Application.main()] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env],methods=[GET]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-01-15 14:21:04.062  INFO 9324 --- [com.application.Application.main()] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/health]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(java.security.Principal)
+2016-01-15 14:21:04.063  INFO 9324 --- [com.application.Application.main()] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/configprops],methods=[GET]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-01-15 14:21:04.170  INFO 9324 --- [com.application.Application.main()] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2016-01-15 14:21:04.185  INFO 9324 --- [com.application.Application.main()] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 0
+2016-01-15 14:21:04.391  INFO 9324 --- [com.application.Application.main()] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2016-01-15 14:21:04.394  INFO 9324 --- [com.application.Application.main()] com.application.Application              : Started Application in 9.07 seconds (JVM running for 15.156)
+2016-01-15 14:21:13.394  INFO 9324 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-01-15 14:40:59.411  INFO 9448 --- [com.application.Application.main()] com.application.Application              : Starting Application on Kuba-Laptop with PID 9448 (c:\Users\Kuba\ProjetTutore\ATPLQUIZZ\target\classes started by Kuba in c:\Users\Kuba\ProjetTutore\ATPLQUIZZ)
+2016-01-15 14:40:59.475  INFO 9448 --- [com.application.Application.main()] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@1f48482b: startup date [Fri Jan 15 14:40:59 CET 2016]; root of context hierarchy
+2016-01-15 14:41:01.273  INFO 9448 --- [com.application.Application.main()] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'beanNameViewResolver': replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter.class]]
+2016-01-15 14:41:02.657  INFO 9448 --- [com.application.Application.main()] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$cc8be778] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-01-15 14:41:02.753  INFO 9448 --- [com.application.Application.main()] trationDelegate$BeanPostProcessorChecker : Bean 'transactionAttributeSource' of type [class org.springframework.transaction.annotation.AnnotationTransactionAttributeSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-01-15 14:41:02.784  INFO 9448 --- [com.application.Application.main()] trationDelegate$BeanPostProcessorChecker : Bean 'transactionInterceptor' of type [class org.springframework.transaction.interceptor.TransactionInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-01-15 14:41:02.800  INFO 9448 --- [com.application.Application.main()] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.config.internalTransactionAdvisor' of type [class org.springframework.transaction.interceptor.BeanFactoryTransactionAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-01-15 14:41:03.578  INFO 9448 --- [com.application.Application.main()] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2016-01-15 14:41:03.919  INFO 9448 --- [com.application.Application.main()] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2016-01-15 14:41:03.956  INFO 9448 --- [com.application.Application.main()] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.0.28
+2016-01-15 14:41:04.281  INFO 9448 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2016-01-15 14:41:06.304  INFO 9448 --- [localhost-startStop-1] o.s.b.c.e.ServletRegistrationBean        : Mapping servlet: 'dispatcherServlet' to [/]
+2016-01-15 14:41:06.724  INFO 9448 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'metricFilter' to: [/*]
+2016-01-15 14:41:06.725  INFO 9448 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-01-15 14:41:06.733  INFO 9448 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-01-15 14:41:06.755  INFO 9448 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'webRequestLoggingFilter' to: [/*]
+2016-01-15 14:41:06.770  INFO 9448 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'applicationContextIdFilter' to: [/*]
+2016-01-15 14:41:07.751  INFO 9448 --- [com.application.Application.main()] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-01-15 14:41:07.821  INFO 9448 --- [com.application.Application.main()] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-01-15 14:41:08.026  INFO 9448 --- [com.application.Application.main()] org.hibernate.Version                    : HHH000412: Hibernate Core {4.3.11.Final}
+2016-01-15 14:41:08.039  INFO 9448 --- [com.application.Application.main()] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2016-01-15 14:41:08.067  INFO 9448 --- [com.application.Application.main()] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2016-01-15 14:41:08.418  INFO 9448 --- [com.application.Application.main()] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2016-01-15 14:41:08.555  INFO 9448 --- [com.application.Application.main()] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2016-01-15 14:41:08.643  INFO 9448 --- [com.application.Application.main()] o.h.h.i.ast.ASTQueryTranslatorFactory    : HHH000397: Using ASTQueryTranslatorFactory
+2016-01-15 14:41:08.837  INFO 9448 --- [com.application.Application.main()] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2016-01-15 14:41:08.840  INFO 9448 --- [com.application.Application.main()] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2016-01-15 14:41:10.736  INFO 9448 --- [com.application.Application.main()] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/autoconfig],methods=[GET]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-01-15 14:41:10.763  INFO 9448 --- [com.application.Application.main()] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics/{name:.*}],methods=[GET]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+2016-01-15 14:41:10.773  INFO 9448 --- [com.application.Application.main()] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics],methods=[GET]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-01-15 14:41:10.802  INFO 9448 --- [com.application.Application.main()] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/health]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(java.security.Principal)
+2016-01-15 14:41:10.841  INFO 9448 --- [com.application.Application.main()] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/configprops],methods=[GET]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-01-15 14:41:10.843  INFO 9448 --- [com.application.Application.main()] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/mappings],methods=[GET]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-01-15 14:41:10.878  INFO 9448 --- [com.application.Application.main()] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/trace],methods=[GET]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-01-15 14:41:10.881  INFO 9448 --- [com.application.Application.main()] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/dump],methods=[GET]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-01-15 14:41:10.918  INFO 9448 --- [com.application.Application.main()] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env/{name:.*}],methods=[GET]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+2016-01-15 14:41:10.957  INFO 9448 --- [com.application.Application.main()] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env],methods=[GET]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-01-15 14:41:10.998  INFO 9448 --- [com.application.Application.main()] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/info],methods=[GET]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-01-15 14:41:11.033  INFO 9448 --- [com.application.Application.main()] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/beans],methods=[GET]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-01-15 14:41:11.179  INFO 9448 --- [com.application.Application.main()] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2016-01-15 14:41:11.194  INFO 9448 --- [com.application.Application.main()] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 0
+2016-01-15 14:41:11.526  INFO 9448 --- [com.application.Application.main()] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2016-01-15 14:41:11.528  INFO 9448 --- [com.application.Application.main()] com.application.Application              : Started Application in 12.527 seconds (JVM running for 21.494)
+2016-01-15 14:42:59.498  INFO 9448 --- [http-nio-8080-exec-10] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2016-01-15 15:36:22.883  INFO 1368 --- [com.application.Application.main()] com.application.Application              : Starting Application on Kuba-Laptop with PID 1368 (c:\Users\Kuba\ProjetTutore\ATPLQUIZZ\target\classes started by Kuba in c:\Users\Kuba\ProjetTutore\ATPLQUIZZ)
+2016-01-15 15:36:22.939  INFO 1368 --- [com.application.Application.main()] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@131e3cff: startup date [Fri Jan 15 15:36:22 CET 2016]; root of context hierarchy
+2016-01-15 15:36:24.006  INFO 1368 --- [com.application.Application.main()] o.s.b.f.s.DefaultListableBeanFactory     : Overriding bean definition for bean 'beanNameViewResolver': replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter.class]]
+2016-01-15 15:36:25.154  INFO 1368 --- [com.application.Application.main()] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$3dca6b1a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-01-15 15:36:25.195  INFO 1368 --- [com.application.Application.main()] trationDelegate$BeanPostProcessorChecker : Bean 'transactionAttributeSource' of type [class org.springframework.transaction.annotation.AnnotationTransactionAttributeSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-01-15 15:36:25.211  INFO 1368 --- [com.application.Application.main()] trationDelegate$BeanPostProcessorChecker : Bean 'transactionInterceptor' of type [class org.springframework.transaction.interceptor.TransactionInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-01-15 15:36:25.229  INFO 1368 --- [com.application.Application.main()] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.config.internalTransactionAdvisor' of type [class org.springframework.transaction.interceptor.BeanFactoryTransactionAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-01-15 15:36:26.063  INFO 1368 --- [com.application.Application.main()] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2016-01-15 15:36:26.349  INFO 1368 --- [com.application.Application.main()] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2016-01-15 15:36:26.352  INFO 1368 --- [com.application.Application.main()] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.0.28
+2016-01-15 15:36:26.507  INFO 1368 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2016-01-15 15:36:27.686  INFO 1368 --- [localhost-startStop-1] o.s.b.c.e.ServletRegistrationBean        : Mapping servlet: 'dispatcherServlet' to [/]
+2016-01-15 15:36:27.694  INFO 1368 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'metricFilter' to: [/*]
+2016-01-15 15:36:27.695  INFO 1368 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-01-15 15:36:27.695  INFO 1368 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-01-15 15:36:27.696  INFO 1368 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'webRequestLoggingFilter' to: [/*]
+2016-01-15 15:36:27.697  INFO 1368 --- [localhost-startStop-1] o.s.b.c.embedded.FilterRegistrationBean  : Mapping filter: 'applicationContextIdFilter' to: [/*]
+2016-01-15 15:36:28.367  INFO 1368 --- [com.application.Application.main()] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2016-01-15 15:36:28.384  INFO 1368 --- [com.application.Application.main()] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2016-01-15 15:36:28.508  INFO 1368 --- [com.application.Application.main()] org.hibernate.Version                    : HHH000412: Hibernate Core {4.3.11.Final}
+2016-01-15 15:36:28.512  INFO 1368 --- [com.application.Application.main()] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2016-01-15 15:36:28.515  INFO 1368 --- [com.application.Application.main()] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2016-01-15 15:36:28.692  INFO 1368 --- [com.application.Application.main()] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2016-01-15 15:36:28.779  INFO 1368 --- [com.application.Application.main()] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2016-01-15 15:36:28.847  INFO 1368 --- [com.application.Application.main()] o.h.h.i.ast.ASTQueryTranslatorFactory    : HHH000397: Using ASTQueryTranslatorFactory
+2016-01-15 15:36:28.976  INFO 1368 --- [com.application.Application.main()] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000227: Running hbm2ddl schema export
+2016-01-15 15:36:28.978  INFO 1368 --- [com.application.Application.main()] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete
+2016-01-15 15:36:30.548  INFO 1368 --- [com.application.Application.main()] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/trace],methods=[GET]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-01-15 15:36:30.551  INFO 1368 --- [com.application.Application.main()] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env/{name:.*}],methods=[GET]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+2016-01-15 15:36:30.582  INFO 1368 --- [com.application.Application.main()] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/env],methods=[GET]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-01-15 15:36:30.584  INFO 1368 --- [com.application.Application.main()] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/beans],methods=[GET]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-01-15 15:36:30.601  INFO 1368 --- [com.application.Application.main()] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/dump],methods=[GET]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-01-15 15:36:30.605  INFO 1368 --- [com.application.Application.main()] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics/{name:.*}],methods=[GET]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+2016-01-15 15:36:30.605  INFO 1368 --- [com.application.Application.main()] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/metrics],methods=[GET]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-01-15 15:36:30.607  INFO 1368 --- [com.application.Application.main()] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/health]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(java.security.Principal)
+2016-01-15 15:36:30.609  INFO 1368 --- [com.application.Application.main()] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/info],methods=[GET]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-01-15 15:36:30.611  INFO 1368 --- [com.application.Application.main()] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/autoconfig],methods=[GET]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-01-15 15:36:30.614  INFO 1368 --- [com.application.Application.main()] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/mappings],methods=[GET]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-01-15 15:36:30.615  INFO 1368 --- [com.application.Application.main()] o.s.b.a.e.mvc.EndpointHandlerMapping     : Mapped "{[/configprops],methods=[GET]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-01-15 15:36:30.862  INFO 1368 --- [com.application.Application.main()] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2016-01-15 15:36:30.874  INFO 1368 --- [com.application.Application.main()] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 0
+2016-01-15 15:36:31.056  INFO 1368 --- [com.application.Application.main()] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2016-01-15 15:36:31.059  INFO 1368 --- [com.application.Application.main()] com.application.Application              : Started Application in 8.56 seconds (JVM running for 14.831)
+2016-01-15 15:36:54.237  INFO 1368 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
