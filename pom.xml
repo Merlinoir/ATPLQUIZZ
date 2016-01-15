@@ -27,10 +27,10 @@
             <artifactId>spring-jdbc</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.h2database</groupId>
-            <artifactId>h2</artifactId>
-            <version>1.4.190</version>
-        </dependency>
+		    <groupId>org.postgresql</groupId>
+		    <artifactId>postgresql</artifactId>
+		    <version>9.4.1207.jre7</version>
+		</dependency>
         <dependency>
           <groupId>org.springframework.boot</groupId>
           <artifactId>spring-boot-starter-data-jpa</artifactId>
@@ -68,15 +68,16 @@
                 <artifactId>flyway-maven-plugin</artifactId>
                 <version>3.2.1</version>
                 <configuration>
-                    <url>jdbc:h2:file:./database</url>
-                    <user>sa</user>
+                    <url>jdbc:postgresql://postgresql-projetatpl.alwaysdata.net:5432/projetatpl_db</url>
+                    <user>projetatpl</user>
+                    <password>projetatpl</password>
                 </configuration>
                 <dependencies>
                     <dependency>
-                        <groupId>com.h2database</groupId>
-                        <artifactId>h2</artifactId>
-                        <version>1.4.190</version>
-                    </dependency>
+		    			<groupId>org.postgresql</groupId>
+		    			<artifactId>postgresql</artifactId>
+		    			<version>9.4.1207.jre7</version>
+				</dependency>
                 </dependencies>
             </plugin>
         </plugins>
