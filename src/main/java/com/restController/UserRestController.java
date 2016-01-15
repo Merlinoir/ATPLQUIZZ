@@ -33,7 +33,7 @@ public class UserRestController {
 	                user.setId(rs.getInt("id"));
 	                user.setNom(rs.getString("nom"));
 	                user.setPrenom(rs.getString("prenom"));
-									user.setPassword(rs.getString("password"));
+					user.setPassword(rs.getString("password"));
 	                return user;
 	            }
 	        });
@@ -66,10 +66,10 @@ public class UserRestController {
 	        return users;
 	  }
 
-	  @RequestMapping(value="/{userID}/{nom}/{prenom}/{password}", method = RequestMethod.POST)
+	  @RequestMapping(value="/{userID}/{nom}/{prenom}/{password}", method = RequestMethod.PUT)
 	  public void createPerson(@PathVariable String userID, @PathVariable String nom, @PathVariable String prenom, @PathVariable String password){
 	    // REQUETE
-	    this.jdbcTemplate.update("insert into UTILISATEUR (ID, NOM, PRENOM, PASSWORD) values (?,?,?)", new Object[]{userID, nom, prenom, password}, new Object[]{Types.INTEGER, Types.VARCHAR, Types.VARCHAR, Types.VARCHAR});
+	    this.jdbcTemplate.update("insert into UTILISATEUR (ID, NOM, PRENOM, PASSWORD, ISADMIN) values (?,?,?,?, FALSE)", userID, nom, prenom, password);
 	  }
 
 }
