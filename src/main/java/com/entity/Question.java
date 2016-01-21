@@ -4,14 +4,14 @@ public class Question {
 	
 	private long id_question;
 	private String libelleQuestion;
-	private String id_theme;
+	private int id_theme;
 	
 	
 	
 	public Question(){
 		
 	}
-	public Question(long id_question, String libelleQuestion, String id_theme) {
+	public Question(long id_question, String libelleQuestion, int id_theme) {
 		super();
 		this.id_question = id_question;
 		this.libelleQuestion = libelleQuestion;
@@ -31,11 +31,11 @@ public class Question {
 	public void setLibelleQuestion(String libelleQuestion) {
 		this.libelleQuestion = libelleQuestion;
 	}
-	public String getId_theme() {
+	public int getId_theme() {
 		return id_theme;
 	}
-	public void setId_theme(String id_theme) {
-		this.id_theme = id_theme;
+	public void setId_theme(int i) {
+		this.id_theme = i;
 	}
 	
 	

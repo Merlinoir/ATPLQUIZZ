@@ -1,9 +1,9 @@
-<<<<<<< HEAD
-C:\Users\Beekman\Documents\GitHub\ATPLQUIZZ\src\main\java\com\application\Application.java
-C:\Users\Beekman\Documents\GitHub\ATPLQUIZZ\src\main\java\com\restController\UserRestController.java
-C:\Users\Beekman\Documents\GitHub\ATPLQUIZZ\src\main\java\com\entity\User.java
-=======
 /home/Baekdoosan/GIT/ATLPQUIZZ/src/main/java/com/restController/UserRestController.java
+/home/Baekdoosan/GIT/ATLPQUIZZ/src/main/java/com/entity/Qcm.java
+/home/Baekdoosan/GIT/ATLPQUIZZ/src/main/java/com/entity/Theme.java
 /home/Baekdoosan/GIT/ATLPQUIZZ/src/main/java/com/entity/User.java
+/home/Baekdoosan/GIT/ATLPQUIZZ/src/main/java/com/entity/Reponse.java
+/home/Baekdoosan/GIT/ATLPQUIZZ/src/main/java/com/entity/Question.java
 /home/Baekdoosan/GIT/ATLPQUIZZ/src/main/java/com/application/Application.java
->>>>>>> 62b1da19aa174ec12647503c53031cc71f3c9ca7
+/home/Baekdoosan/GIT/ATLPQUIZZ/src/main/java/com/restController/QuestionRestController.java
+/home/Baekdoosan/GIT/ATLPQUIZZ/src/main/java/com/restController/QcmRestController.java
