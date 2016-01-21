@@ -1,16 +1,17 @@
 <!doctype html>
-<html lang="en" ng-app="userModule">
+<html lang="en" ng-app="atplQuizzApp">
 <head>
-  <meta charset="utf-8">
-  <title>My HTML File</title>
-  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
-  <link rel="stylesheet" href="css/app.css">
-  <script src="js/libs/angular.min.js"></script>
-  <script src="js/libs/angular-route.min.js"></script>
+<meta charset="utf-8">
+<title>My HTML File</title>
+<link rel="stylesheet" href="css/atplQuizzApp.css">
+<script src="js/libs/angular.min.js"></script>
+<script src="js/libs/angular-route.min.js"></script>
+<script src="js/libs/angular-resource.min.js"></script>
+<script src="js/controller/firstController.js"></script>
+<script src="js/controller/userController.js"></script>
 </head>
 <body>
-
-  <p>Nothing here {{'yet' + '!'}} VERSION TD6</p>
-
+<div ng-view>
+        </div>
 </body>
 </html>
