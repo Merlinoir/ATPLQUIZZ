@@ -1,8 +1,5 @@
 package com.entity;
 
-import javax.persistence.Entity;
-
-@Entity
 import static javax.persistence.GenerationType.AUTO;
 
 import java.io.Serializable;
