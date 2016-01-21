@@ -1,4 +1,4 @@
-var atplQuizzAppModule = angular.module('atplQuizzApp', ['ngRoute']);
+var atplQuizzAppModule = angular.module('atplQuizzApp', ['ngRoute', 'ngResource']);
 
 atplQuizzAppModule.config(['$routeProvider', function($routeProvider) {
 	$routeProvider.when('/', {
