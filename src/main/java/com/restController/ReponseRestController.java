@@ -21,7 +21,7 @@ import com.entity.Reponse;
 
 	
 	@RestController
-	@RequestMapping("/reponse")
+	@RequestMapping("/reponses")
 	public class ReponseRestController {
 		
 		private static Log log = LogFactory.getLog(Application.class);

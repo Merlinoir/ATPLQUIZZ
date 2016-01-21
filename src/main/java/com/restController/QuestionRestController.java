@@ -18,7 +18,7 @@ import com.application.Application;
 import com.entity.Question;
 
 @RestController
-@RequestMapping("/question")
+@RequestMapping("/questions")
 public class QuestionRestController {
 	
 	private static Log log = LogFactory.getLog(Application.class);

@@ -19,7 +19,7 @@ import com.entity.Qcm;
 import com.entity.User;
 
 @RestController
-@RequestMapping("/qcm")
+@RequestMapping("/qcms")
 public class QcmRestController {
 	
 	private static Log log = LogFactory.getLog(Application.class);
