@@ -1,8 +1,33 @@
 package com.entity;
 
-public class User {
+import static javax.persistence.GenerationType.AUTO;
 
-	private long id;
+import java.io.Serializable;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "UTILISATEUR")
+@SequenceGenerator(
+		name = "UTILISATEUR_SEQ",
+		sequenceName = "UTILISATEUR_SEQ")
+public class User implements Serializable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
+	/*
+	 * id utilisateur
+	 */
+	@Id
+	@GeneratedValue(strategy=AUTO, generator = "UTILSATEUR_SEQ")
+	private int id;
 	private String nom;
 	private String prenom;
 	private String password;
@@ -10,7 +35,7 @@ public class User {
 	public User() {
 	}
 
-	public User(long id, String nom, String prenom, String password) {
+	public User(int id, String nom, String prenom, String password) {
 		super();
 		this.id = id;
 		this.nom = nom;
@@ -22,7 +47,7 @@ public class User {
 		return id;
 	}
 
-	public void setId(long id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 
