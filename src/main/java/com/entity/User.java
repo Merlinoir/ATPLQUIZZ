@@ -1,14 +1,33 @@
 package com.entity;
 
+import java.io.Serializable;
+
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
-public class User {
+@Table(name = "USER")
+public class User implements Serializable {
+	
+	private static final long serialVersionUID = 1L;
 
-	private long id;
+	@Id
+	@GeneratedValue
+	private Long id;
+
+	@Column(nullable = false)
 	private String nom;
+
+	@Column(nullable = false)
 	private String prenom;
+
+	@Column(nullable = false)
 	private String password;
+	
+	
 
 	public User() {
 	}

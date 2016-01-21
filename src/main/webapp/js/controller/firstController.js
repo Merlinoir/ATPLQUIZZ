@@ -1,4 +1,4 @@
-var atplQuizzAppModule = angular.module('atplQuizzApp', ['ngRoute', 'ngResource']);
+var atplQuizzAppModule = angular.module('atplQuizzApp', ['ngRoute', 'ngResource', 'atplQuizzAppServices', 'atplQuizzAppControllers']);
 
 atplQuizzAppModule.config(['$routeProvider', function($routeProvider) {
 	$routeProvider.when('/', {
@@ -12,6 +12,3 @@ atplQuizzAppModule.config(['$routeProvider', function($routeProvider) {
     });
 }]);
 
-atplQuizzAppModule.controller('userLoginController', function ($scope) {
-	  
-});

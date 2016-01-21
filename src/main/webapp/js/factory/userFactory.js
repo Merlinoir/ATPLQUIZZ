@@ -1,7 +1,9 @@
-atplQuizzAppModule.factory("User", ["$resource", function ($resource) {
+var atplQuizzAppServices = angular.module('atplQuizzAppServices', ['ngResource']);
+
+atplQuizzAppServices.factory('UserService', ['$resource', function ($resource) {
 	return $resource(
-	        "/user', {}, {
-			query: {method:'GET', isArray:true},
+	        '/users', {}, {
+			query: {method:'GET', isArray:false},
 			save: {method:'POST'}
 		});
-	});
+	}]);
