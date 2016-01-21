@@ -1,12 +1,14 @@
 package com.entity;
 
+import java.sql.Date;
+
 public class Qcm {
 	
 	
 	private long id_qcm;
 	private long id_user;
 	private long id_question;
-	private long date;
+	private Date date;
 	private boolean resultat;
 	
 	
@@ -15,7 +17,7 @@ public class Qcm {
 		
 	}
 	
-	public Qcm(long id_qcm, long id_user, long id_question, long date, boolean resultat) {
+	public Qcm(long id_qcm, long id_user, long id_question, Date date, boolean resultat) {
 		super();
 		this.id_qcm = id_qcm;
 		this.id_user = id_user;
@@ -49,12 +51,12 @@ public class Qcm {
 		this.id_question = id_question;
 	}
 
-	public long getDate() {
+	public Date getDate() {
 		return date;
 	}
 
-	public void setDate(long date) {
-		this.date = date;
+	public void setDate(Date date2) {
+		this.date = date2;
 	}
 
 	public boolean isResultat() {

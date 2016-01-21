@@ -6,6 +6,8 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
+
 import java.util.*;
 import org.springframework.jdbc.core.RowMapper;
 import java.sql.ResultSet;
@@ -62,6 +64,44 @@ public class UserRestController {
 	          log.info("findById rest request result : "+user.toString());
 	        }
 	        return users;
+	  }
+	  
+	  @RequestMapping(value="create", method=RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
+	  @ResponseBody
+	  public User createUser (@RequestBody User user){
+		  log.info("Creating user :" + user.toString());
+		  final long userID = user.getId();
+		  final String nom = user.getNom();
+		  final String prenom = user.getPrenom();
+		  final String password = user.getPassword();
+		  final boolean isAdmin = user.getIsAdmin();
+		  
+		  this.jdbcTemplate.update("insert into utilisateur (ID,NOM,PRENOM,PASSWORD,ISADMIN) values (?,?,?,?,?)",userID,nom,prenom,password,isAdmin);
+		  return user;
+
+	  }
+	  
+	  @RequestMapping(value="update", method=RequestMethod.PUT, consumes = MediaType.APPLICATION_JSON_VALUE)
+	  @ResponseBody
+	  public User updateUser(@RequestBody User user){
+		  log.info("User before update : "+user.toString());
+		  final long userID = user.getId();
+		  final String nom = user.getNom();
+		  final String prenom = user.getPrenom();
+		  final String password = user.getPassword();
+		  final boolean isAdmin = user.getIsAdmin();
+		  
+		  this.jdbcTemplate.update("update utilisateur set NOM=?,PRENOM=?, PASSWORD=?, ISADMIN=? "+" where ID=? ",nom,prenom,password,isAdmin,userID);
+		  log.info("User after update : "+user.toString());
+		  return user;
+	  }
+	  
+	  @RequestMapping (value="delete" ,method=RequestMethod.DELETE, consumes = MediaType.APPLICATION_JSON_VALUE)
+	  @ResponseBody
+	  public void deleteUser(@RequestBody User user){
+		  log.info("User before update : "+user.toString());
+		  final long userID = user.getId();		  
+		  this.jdbcTemplate.update("delete from utilisateur  where ID=? " ,userID);	  
 	  }
 
 	  @RequestMapping(value="/{userID}/{nom}/{prenom}/{password}", method = RequestMethod.PUT)
