@@ -1,3 +1,6 @@
-atplQuizzAppModule.controller('registrationController', function ($scope) {
+(function() {
+    'use strict';
+    angular.module("atplQuizzApp").controller('themeController', function ($scope) {
   
-});
+    });
+})();
