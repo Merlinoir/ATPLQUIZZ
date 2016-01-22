@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" ng-app="atplQuizzApp">
 
 <head>
 
@@ -28,14 +28,7 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <script src="js/libs/angular.min.js"></script>
-	<script src="js/libs/angular-route.min.js"></script>
-	<script src="js/libs/angular-resource.min.js"></script>
-	<script src="atplQuizzGlobalController.js"></script>
-	<script src="atplQuizzGlobalService.js"></script>
-	<script src="js/register/controller/registerController.js"></script>
-	<script src="js/user/controller/userController.js"></script>
-	
+    
 	
 </head>
 
@@ -95,7 +88,9 @@
 <!--         </div> -->
     </header>
 
-    <div ng-view></div>
+    <div class="col-xs-12 col-sm-9">
+					<div data-ui-view></div>
+				</div>
 
     <!-- Footer -->
     <footer class="text-center">
@@ -126,6 +121,13 @@
 
    
 
+	<script type="text/javascript" src="js/libs/angular.js"></script>
+	<script type="text/javascript" src="js/libs/angular-route.min.js"></script>
+	<script type="text/javascript" src="js/libs/angular-resource.min.js"></script>
+	<script type="text/javascript" src="atplQuizzGlobalController.js"></script>
+	<script type="text/javascript" src="atplQuizzGlobalService.js"></script>
+	<script type="text/javascript" src="js/register/controller/registerController.js"></script>
+	<script type="text/javascript" src="js/user/controller/userController.js"></script>
     <!-- jQuery -->
     <script src="js/libs/jquery.js"></script>
 
@@ -140,6 +142,10 @@
     
     <!-- Custom Theme JavaScript -->
     <script src="js/libs/atplQuizz.js"></script>
+    
+    <script type="text/javascript" src="js/login/controller/loginController.js"></script>
+    
+    
 
 </body>
 
