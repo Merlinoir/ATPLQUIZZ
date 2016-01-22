@@ -68,9 +68,9 @@
                 <artifactId>flyway-maven-plugin</artifactId>
                 <version>3.2.1</version>
                 <configuration>
-                    <url>jdbc:postgresql://postgresql-projetatpl.alwaysdata.net:5432/projetatpl_db</url>
-                    <user>projetatpl</user>
-                    <password>projetatpl</password>
+                    <url></url>
+                    <user></user>
+                    <password></password>
                 </configuration>
                 <dependencies>
                     <dependency>
