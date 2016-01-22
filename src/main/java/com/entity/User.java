@@ -1,43 +1,24 @@
 package com.entity;
 
-import java.io.Serializable;
+public class User {
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
-
-@Entity
-@Table(name = "USER")
-public class User implements Serializable {
-	
-	private static final long serialVersionUID = 1L;
-
-	@Id
-	@GeneratedValue
-	private Long id;
-
-	@Column(nullable = false)
+	private long id;
 	private String nom;
-
-	@Column(nullable = false)
 	private String prenom;
-
-	@Column(nullable = false)
 	private String password;
-	
-	
+	private Boolean isAdmin;
 
+	
 	public User() {
 	}
 
-	public User(long id, String nom, String prenom, String password) {
+	public User(long id, String nom, String prenom, String password, Boolean isAdmin) {
 		super();
 		this.id = id;
 		this.nom = nom;
 		this.prenom = prenom;
 		this.password = password;
+		this.isAdmin = isAdmin;
 	}
 
 	public long getId() {
@@ -71,10 +52,22 @@ public class User implements Serializable {
 	public void setPassword(String password) {
 		this.password = password;
 	}
+	
+	public Boolean getIsAdmin() {
+		return isAdmin;
+	}
+
+	public void setIsAdmin(Boolean isAdmin) {
+		this.isAdmin = isAdmin;
+	}
 
 	@Override
 	public String toString() {
-		return "User [id=" + id + ", nom=" + nom + ", prenom=" + prenom + ", password=" + password + "]";
+		return "User [id=" + id + ", nom=" + nom + ", prenom=" + prenom + ", password=" + password + ", isAdmin="
+				+ isAdmin + "]";
 	}
+
+
+	
 
 }
