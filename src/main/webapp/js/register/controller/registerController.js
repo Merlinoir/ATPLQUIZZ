@@ -1,3 +1,3 @@
-atplQuizzAppControllers.controller('registrationController', function ($scope) {
+atplQuizzAppModule.controller('registrationController', function ($scope) {
   
 });

@@ -1,4 +1,4 @@
-var atplQuizzAppModule = angular.module('atplQuizzApp', ['ngRoute', 'ngResource', 'atplQuizzAppServices', 'atplQuizzAppControllers']);
+var atplQuizzAppModule = angular.module('atplQuizzApp', ['ngRoute', 'ngResource']);
 
 atplQuizzAppModule.config(['$routeProvider', function($routeProvider) {
 	$routeProvider.when('/', {
@@ -11,3 +11,4 @@ atplQuizzAppModule.config(['$routeProvider', function($routeProvider) {
         redirectTo: '/'
     });
 }]);
+
