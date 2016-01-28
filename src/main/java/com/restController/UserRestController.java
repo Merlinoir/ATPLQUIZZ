@@ -108,7 +108,7 @@ public class UserRestController {
 	  }
 
 	@RequestMapping(value = "/{userId}", method = RequestMethod.DELETE)
-	void deletePerson (@PathVariable long userId) {
+	void deleteUser (@PathVariable long userId) {
 		log.info("Deleting user_table record ID " + userId);
 
 		jdbcTemplate.update (
