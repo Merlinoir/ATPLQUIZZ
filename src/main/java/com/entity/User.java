@@ -3,19 +3,19 @@ package com.entity;
 public class User {
 
 	private long id;
-	private String nom;
-	private String prenom;
+	private String pseudo;
 	private String password;
+	private Boolean isAdmin;
 
 	public User() {
 	}
 
-	public User(long id, String nom, String prenom, String password) {
+	public User(long id, String pseudo, String password, Boolean isAdmin) {
 		super();
 		this.id = id;
-		this.nom = nom;
-		this.prenom = prenom;
+		this.pseudo = pseudo;
 		this.password = password;
+		this.isAdmin = isAdmin;
 	}
 
 	public long getId() {
@@ -26,20 +26,20 @@ public class User {
 		this.id = id;
 	}
 
-	public String getNom() {
-		return nom;
+	public String getPseudo() {
+		return pseudo;
 	}
 
-	public void setNom(String nom) {
-		this.nom = nom;
+	public void setPseudo(String pseudo) {
+		this.pseudo = pseudo;
 	}
 
-	public String getPrenom() {
-		return prenom;
+	public Boolean getIsAdmin() {
+		return isAdmin;
 	}
 
-	public void setPrenom(String prenom) {
-		this.prenom = prenom;
+	public void setIsAdmin(Boolean isAdmin) {
+		this.isAdmin = isAdmin;
 	}
 
 	public String getPassword() {
@@ -52,7 +52,7 @@ public class User {
 
 	@Override
 	public String toString() {
-		return "User [id=" + id + ", nom=" + nom + ", prenom=" + prenom + ", password=" + password + "]";
+		return "User [id=" + id + ", pseudo=" + pseudo + ", isAdmin=" + isAdmin + ", password=" + password + "]";
 	}
 
 }

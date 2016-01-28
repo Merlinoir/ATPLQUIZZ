@@ -31,15 +31,17 @@
     <script src="js/libs/angular.min.js"></script>
 	<script src="js/libs/angular-route.min.js"></script>
 	<script src="js/libs/angular-resource.min.js"></script>
-	<script src="atplQuizzGlobalController.js"></script>
+  <script type="text/javascript" src="app.js"></script>
+  <script type="text/javascript" src="js/user/controller/userController.js"></script>
+<!--	<script src="atplQuizzGlobalController.js"></script>
 	<script src="atplQuizzGlobalService.js"></script>
 	<script src="js/register/controller/registerController.js"></script>
-	<script src="js/user/controller/userController.js"></script>
-	
-	
+	<script src="js/user/controller/userController.js"></script> -->
+
+
 </head>
 
-<body id="page-top" class="index">
+<body ng-app="atplQuizz" id="page-top" class="index">
 
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top">
@@ -78,7 +80,7 @@
     </nav>
 	<div ng-view>
         </div>
-        
+
     <!-- Header -->
     <header>
 <!--         <div class="container"> -->
@@ -102,7 +104,7 @@
         <div class="footer-above">
             <div class="container">
                 <div class="row">
-                    
+
                 </div>
             </div>
         </div>
@@ -124,7 +126,7 @@
         </a>
     </div>
 
-   
+
 
     <!-- jQuery -->
     <script src="js/libs/jquery.js"></script>
@@ -137,7 +139,7 @@
     <script src="js/libs/classie.js"></script>
     <script src="js/libs/cbpAnimatedHeader.js"></script>
 
-    
+
     <!-- Custom Theme JavaScript -->
     <script src="js/libs/atplQuizz.js"></script>
 
