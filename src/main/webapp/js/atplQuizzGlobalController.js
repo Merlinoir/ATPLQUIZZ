@@ -2,11 +2,28 @@
 (function() {
     'use strict';
     
-	angular.module("atplQuizzApp",[]).
-		config(['$stateProvider', '$urlRouterProvider','ui.router', function($stateProvider, $urlRouterProvider) {
+    angular.module('AtplQuizz.globalController', []).
+//    
+//    'ui.router',
+//    '$urlRouterProvider', 
+//    '$stateProvider',  
+//    'ngResource', 
+//    '$rootScope', 
+//    '$state', 
+//    '$stateParams'
+    
+		config(defaultRoute).
+		run(function($rootScope, $state, $stateParams) {
+			$rootScope.$state = $state;
+			$rootScope.$stateParams = $stateParams;
+		});
+		
+		defaultRoute.$inject = ['$stateProvider'];
+				
+		function defaultRoute($stateProvider) {
 			$stateProvider.
 				state('login', {
-					url:'/',
+					url:'/login',
 					templateUrl : 'js/login/view/login.html',
 					controller : 'userLoginController'
 				}).
@@ -26,10 +43,6 @@
 					controller : 'themeController'
 				});
 				
-			$urlRouteProvider.otherwise('/');
-		}]).
-		run(['$rootScope', '$state', '$stateParams'], function($rootScope, $state, $stateParams) {
-			$rootScope.$state = $state;
-			$rootScope.$stateParams = $stateParams;
-		});
+//			$routeProvider.otherwise('/');
+		}
 })();
