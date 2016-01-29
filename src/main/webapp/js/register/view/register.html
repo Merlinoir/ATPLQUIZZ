@@ -1,30 +1,22 @@
 <div class="container" ng-controller="registrationController">
-    <h1>User detail</h1>
+    
 
-    <form novalidate="novalidate" class="form-horizontal">
-    <div class="control-group">
-            <label class="control-label" for="inputNickname">Nickname :</label>
-            <div class="controls">
-                <input type="text" id="inputNickname" ng-model="user.nickname"/>
-            </div>
-        </div>
-        <div class="control-group">
-            <label class="control-label" for="inputFirstName">First name :</label>
-            <div class="controls">
-                <input type="text" id="inputFirstName" ng-model="user.firstName"/>
-            </div>
-        </div>
-        <div class="control-group">
-            <label class="control-label" for="inputLastName">Last name :</label>
-            <div class="controls">
-                <input type="text" id="inputLastName" ng-model="user.lastName"/>
-            </div>
-        </div>
-        <div class="control-group">
-           <label class="control-label" for="inputEmail">Email :</label>
-            <div class="controls">
-                <input type="text" id="inputEmail" ng-model="user.email"/>
-            </div>
-            <button type="submit">Sauvegarder</button>
+    <form class="form-signin">
+                    <h3 >Inscription à ATPL QUIZZ</h3></br></br></br></br>
+                    <label class="required" for="email">Votre adresse email</label>
+                    <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus></br>
+                    <label class="required" for="name">Votre nom complet</label>
+                    <input class="form-control" id="name" type="text" name="name" value="" placeholder="exemple : Marie Dupont" required="" aria-required="true" aria-describedby="name-tip"></br>
+                    <label class="required" for="username">Votre login QUIZZ</label>
+                    <input class="form-control" id="username" type="text" name="username" value="" placeholder="exemple&nbsp;: jdupont" required="" aria-required="true" aria-describedby="username-tip"></br>
+                    <label class="required" for="password">Votre mot de passe</label>
+                    <input type="password" id="inputPassword" class="form-control" placeholder="Mot de passe" required>
+                    <div class="checkbox">
+                      <label>
+                       <!-- <input type="checkbox" value="remember-me"> Remember me
+                      </label> si on a le temps de faire mumuse avec des sessions-->
+                    </div>
+                        <button class="btn btn-lg btn-primary btn-block" onclick="javascript:afficher_cacher();"type="submit">S'inscrire</button></br></br>
     </form>
+            
 </div>
