@@ -2,7 +2,7 @@ var app = angular.module('atplQuizz', ['ngRoute'])
 
 .config (function ($routeProvider) {
 	$routeProvider
-		.when ('/users/all', {
+		.when ('/users', {
 			templateUrl: 'js/user/view/userList.html'
 		})
 		.when ('/users/:id', {

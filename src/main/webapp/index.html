@@ -33,15 +33,11 @@
 	<script src="js/libs/angular-resource.min.js"></script>
   <script type="text/javascript" src="app.js"></script>
   <script type="text/javascript" src="js/user/controller/userController.js"></script>
-<!--	<script src="atplQuizzGlobalController.js"></script>
-	<script src="atplQuizzGlobalService.js"></script>
-	<script src="js/register/controller/registerController.js"></script>
-	<script src="js/user/controller/userController.js"></script> -->
 
 
 </head>
 
-<body ng-app="atplQuizz" id="page-top" class="index">
+<body data-ng-app="atplQuizz" id="page-top" class="index">
 
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top">
@@ -78,9 +74,9 @@
         </div>
         <!-- /.container-fluid -->
     </nav>
-	<div ng-view>
-        </div>
-
+    
+    <div data-ng-view></div>
+    
     <!-- Header -->
     <header>
 <!--         <div class="container"> -->
@@ -96,8 +92,8 @@
 <!--             </div> -->
 <!--         </div> -->
     </header>
-
-    <div ng-view></div>
+    
+    <div data-ng-view></div>
 
     <!-- Footer -->
     <footer class="text-center">

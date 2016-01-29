@@ -36,7 +36,7 @@ public class UserRestController {
 	@Autowired
 	JdbcTemplate jdbcTemplate;
 
-	  @RequestMapping(value="/all", method = RequestMethod.GET)
+	  @RequestMapping(method = RequestMethod.GET)
 	  public List<User> findAll(){
 	    // REQUETE
 	    List<User> users = this.jdbcTemplate.query(
@@ -46,8 +46,8 @@ public class UserRestController {
 	            	User user = new User();
 	                user.setId(rs.getInt("id_user"));
 	                user.setPseudo(rs.getString("pseudo"));
-									user.setPassword(rs.getString("password"));
-									user.setIsAdmin(rs.getBoolean("isAdmin"));
+					user.setPassword(rs.getString("password"));
+					user.setIsAdmin(rs.getBoolean("isAdmin"));
 	                return user;
 	            }
 	        });
@@ -69,7 +69,7 @@ public class UserRestController {
 	                user.setId(rs.getInt("id_user"));
 	                user.setPseudo(rs.getString("pseudo"));
 	                user.setPassword(rs.getString("password"));
-									user.setIsAdmin(rs.getBoolean("isAdmin"));
+					user.setIsAdmin(rs.getBoolean("isAdmin"));
 	                return user;
 	            }
 	        });
@@ -80,7 +80,7 @@ public class UserRestController {
 	        return users;
 	  }
 
-		@RequestMapping(value="create", method=RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
+		@RequestMapping(value="create", method=RequestMethod.PUT, consumes = MediaType.APPLICATION_JSON_VALUE)
 	  @ResponseBody
 	  public User createUser (@RequestBody User user){
 		  log.info("Creating user :" + user.toString());

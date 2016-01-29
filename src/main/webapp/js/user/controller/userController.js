@@ -30,10 +30,10 @@ app.controller('UserListController', function($scope, $http) {
 
 .controller('UserFormController', function($scope, $http, $location) {
 	$scope.submit = function() {
-		var response = $http.put ('/users', {
+		var response = $http.put ('/users/create', {
 			'pseudo': $scope.pseudo,
 			'password' : $scope.password,
-			'isAdmin' : $scope.isAdmin
+			'isAdmin' : false
 		});
 
 		response.success(function(data, status, headers, config) {
