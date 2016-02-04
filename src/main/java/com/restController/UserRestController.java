@@ -1,17 +1,24 @@
 package com.restController;
 
-import com.application.Application;
-import com.entity.User;
-import org.springframework.web.bind.annotation.*;
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
-import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.beans.factory.annotation.Autowired;
-import java.util.*;
-import org.springframework.jdbc.core.RowMapper;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Types;
+import java.util.List;
+
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.RowMapper;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.application.Application;
+import com.entity.User;
 
 @RestController
 @RequestMapping("/users")
@@ -22,18 +29,18 @@ public class UserRestController {
 	@Autowired
 	JdbcTemplate jdbcTemplate;
 
-	  @RequestMapping(value="/all", method = RequestMethod.GET)
+	  @RequestMapping(method = RequestMethod.GET)
 	  public List<User> findAll(){
 	    // REQUETE
 	    List<User> users = this.jdbcTemplate.query(
-	        "select * from utilisateur",
+	        "select * from user_table",
 	        new RowMapper<User>() {
 	            public User mapRow(ResultSet rs, int rowNum) throws SQLException {
 	            	User user = new User();
-	                user.setId(rs.getInt("id"));
-	                user.setNom(rs.getString("nom"));
-	                user.setPrenom(rs.getString("prenom"));
-									user.setPassword(rs.getString("password"));
+	                user.setId(rs.getInt("id_user"));
+	                user.setPseudo(rs.getString("pseudo"));
+					user.setPassword(rs.getString("password"));
+					user.setIsAdmin(rs.getBoolean("isAdmin"));
 	                return user;
 	            }
 	        });
@@ -48,14 +55,14 @@ public class UserRestController {
 	  public List<User> findById(@PathVariable String userID){
 	    // REQUETE
 	    List<User> users = this.jdbcTemplate.query(
-	        "select * from UTILISATEUR where id="+userID,
+	        "select * from user_table where id_user="+userID,
 	        new RowMapper<User>() {
 	            public User mapRow(ResultSet rs, int rowNum) throws SQLException {
 	            	User user = new User();
-	                user.setId(rs.getInt("id"));
-	                user.setNom(rs.getString("nom"));
-	                user.setPrenom(rs.getString("prenom"));
+	                user.setId(rs.getInt("id_user"));
+	                user.setPseudo(rs.getString("pseudo"));
 	                user.setPassword(rs.getString("password"));
+					user.setIsAdmin(rs.getBoolean("isAdmin"));
 	                return user;
 	            }
 	        });
@@ -66,10 +73,40 @@ public class UserRestController {
 	        return users;
 	  }
 
-	  @RequestMapping(value="/{userID}/{nom}/{prenom}/{password}", method = RequestMethod.POST)
-	  public void createPerson(@PathVariable String userID, @PathVariable String nom, @PathVariable String prenom, @PathVariable String password){
-	    // REQUETE
-	    this.jdbcTemplate.update("insert into UTILISATEUR (ID, NOM, PRENOM, PASSWORD) values (?,?,?)", new Object[]{userID, nom, prenom, password}, new Object[]{Types.INTEGER, Types.VARCHAR, Types.VARCHAR, Types.VARCHAR});
+		@RequestMapping(value="create", method=RequestMethod.PUT, consumes = MediaType.APPLICATION_JSON_VALUE)
+	  @ResponseBody
+	  public User createUser (@RequestBody User user){
+		  log.info("Creating user :" + user.toString());
+		  final String pseudo = user.getPseudo();
+		  final String password = user.getPassword();
+			final boolean isAdmin = user.getIsAdmin();
+
+		  this.jdbcTemplate.update("insert into user_table (PSEUDO,PASSWORD,ISADMIN) values (?,?,?)",pseudo,password,isAdmin);
+			return user;
+
+		}
+
+		@RequestMapping(value="update", method=RequestMethod.PUT, consumes = MediaType.APPLICATION_JSON_VALUE)
+	  @ResponseBody
+	  public User updateUser(@RequestBody User user){
+		  log.info("User before update : "+user.toString());
+		  final long userID = user.getId();
+		  final String pseudo = user.getPseudo();
+		  final String password = user.getPassword();
+		  final boolean isAdmin = user.getIsAdmin();
+
+		  this.jdbcTemplate.update("update user_table set PSEUDO=?, PASSWORD=?, ISADMIN=? "+" where ID_USER=? ",pseudo,password,isAdmin,userID);
+		  log.info("User after update : "+user.toString());
+		  return user;
 	  }
 
+	@RequestMapping(value = "/{userId}", method = RequestMethod.DELETE)
+	void deleteUser (@PathVariable long userId) {
+		log.info("Deleting user_table record ID " + userId);
+
+		jdbcTemplate.update (
+			"DELETE FROM user_table WHERE id_user = ?;",
+			new Object[] { userId }
+		);
+	}
 }
