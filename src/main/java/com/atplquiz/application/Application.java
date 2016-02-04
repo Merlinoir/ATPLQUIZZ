@@ -1,4 +1,4 @@
-package com.application;
+package com.atplquiz.application;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.context.annotation.ComponentScan;

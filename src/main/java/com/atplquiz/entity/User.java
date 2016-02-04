@@ -1,4 +1,4 @@
-package com.entity;
+package com.atplquiz.entity;
 
 public class User {
 
