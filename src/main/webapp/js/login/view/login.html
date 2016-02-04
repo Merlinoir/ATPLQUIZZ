@@ -5,15 +5,15 @@
                <form class="form-signin">
                     <h3 class="form-signin-heading">Bienvenue</h3></br>
                     <label for="inputId" class="required">Entrez votre login</label>
-                    <input type="text" id="inputId" class="form-control" placeholder="Nickname" required autofocus></br>
+                    <input type="text" ng-model="form.inputPseudo" class="form-control" placeholder="Nickname" required autofocus></br>
                     <label for="inputPassword" class="required">Entrez votre mot de passe</label>
-                    <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                    <input type="password" ng-model="form.inputPassword" class="form-control" placeholder="Password" required>
                     <div class="checkbox">
                       <label>
                        <!-- <input type="checkbox" value="remember-me"> Remember me
                       </label> si on a le temps de faire mumuse avec des sessions-->
                     </div>
-                        <button class="btn btn-lg btn-primary btn-block" type="submit" onclick="javascript:afficher_cacher();">Se connecter</button>
+                        <button ng-click="test()" class="btn btn-lg btn-primary btn-block" type="submit" onclick="javascript:afficher_cacher();">Se connecter</button>
              </form>
             </div>
             

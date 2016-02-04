@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -99,6 +100,25 @@ public class UserController {
 		  return user;
 	  }
 
+		@RequestMapping(value="loginUser", method=RequestMethod.GET)
+		  @ResponseBody
+		  public User loginUser(@RequestParam(value = "login") String login, @RequestParam(value = "password") String password){
+			
+			 String sql = "select * from user_table where pseudo=? and password=?";
+			
+			   User user = jdbcTemplate.queryForObject(sql, new Object[]{login, password}, new RowMapper<User>() {
+			            public User mapRow(ResultSet rs, int rowNum) throws SQLException {
+			            	User user = new User();
+			                user.setId(rs.getInt("id_user"));
+			                user.setPseudo(rs.getString("pseudo"));
+			                user.setPassword(rs.getString("password"));
+							user.setIsAdmin(rs.getBoolean("isAdmin"));
+			                return user;
+			            }
+			        });
+			   return user;
+		  }
+		
 	@RequestMapping(value = "/{userId}", method = RequestMethod.DELETE)
 	void deleteUser (@PathVariable long userId) {
 		log.info("Deleting user_table record ID " + userId);
