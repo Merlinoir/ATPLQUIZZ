@@ -1,23 +1,26 @@
-package com.restController;
+package com.atplquiz.controller;
 
-import com.application.Application;
-import com.entity.User;
 import org.springframework.web.bind.annotation.*;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
+
 import java.util.*;
+
 import org.springframework.jdbc.core.RowMapper;
+
+import com.atplquiz.entity.User;
+
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Types;
 
 @RestController
 @RequestMapping("/users")
-public class UserRestController {
+public class UserController {
 
-	private static Log log = LogFactory.getLog(Application.class);
+	private static Log log = LogFactory.getLog(UserController.class);
 
 	@Autowired
 	JdbcTemplate jdbcTemplate;
