@@ -37,6 +37,11 @@
 					templateUrl : 'js/note/view/mesNotes.html',
 					controller : 'noteController'
 				}).
+				state('users', {
+					url:'/users',
+					templateUrl : 'js/user/view/user.html',
+					controller : 'userController'
+				}).
 				state('themes', {
 					url:'/themes',
 					templateUrl : 'js/theme/view/themes.html',
