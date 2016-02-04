@@ -1,4 +1,4 @@
-package com.restController;
+package com.atplquiz.controller;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -17,14 +17,13 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.application.Application;
-import com.entity.User;
+import com.atplquiz.entity.User;
 
 @RestController
 @RequestMapping("/users")
-public class UserRestController {
+public class UserController {
 
-	private static Log log = LogFactory.getLog(Application.class);
+	private static Log log = LogFactory.getLog(UserController.class);
 
 	@Autowired
 	JdbcTemplate jdbcTemplate;

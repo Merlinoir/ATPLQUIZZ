@@ -1,5 +1,14 @@
-package com.entity;
+package com.atplquiz.entity;
 
+import javax.persistence.Entity;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "user_table")
+@SequenceGenerator(
+		name = "user_seq",
+		sequenceName = "user_table_id_user_seq")
 public class User {
 
 	private long id;
@@ -22,7 +31,7 @@ public class User {
 		return id;
 	}
 
-	public void setId(long id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 

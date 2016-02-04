@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>ATPL quizzzz</title>
+    <title>ATPL quizz</title>
 
     <!-- version compressé du css de Bootstrap pour charger plus rapidement -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -28,6 +28,17 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+       <script type="text/javascript">
+    function afficher_cacher()
+{
+    	var appBanners = document.getElementsByClassName('menuqcm'), i;
+
+    	for (var i = 0; i < appBanners.length; i ++) {
+    	    appBanners[i].style.visibility = 'visible';
+    	}
+}
+    </script>
+    
     
 	
 </head>
@@ -45,7 +56,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#page-top"><i class="fa fa-plane"></i>ATPL quizzzz</a>
+                <a class="navbar-brand" href="#page-top"><i class="fa fa-plane"></i>ATPL quizz</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -55,13 +66,16 @@
                         <a href="#page-top"></a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#/login">LOGIN</a>
+                        <a href="#login">SE CONNECTER</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#/themes">QCM</a>
+                        <a href="#register">S'ENREGISTRER</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#/notes">MES NOTES</a>
+                        <a href="#themes" class="menuqcm" style="visibility:hidden;" >QCM</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#mesNotes" class="menuqcm" style="visibility:hidden;">MES NOTES</a>
                     </li>
                 </ul>
             </div>
