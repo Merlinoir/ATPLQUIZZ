@@ -1,8 +1,24 @@
 package com.atplquiz.entity;
 
+import static javax.persistence.GenerationType.AUTO;
+
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "user_table")
+@SequenceGenerator(
+		name = "user_seq",
+		sequenceName = "user_table_id_user_seq")
 public class User {
 
-	private long id;
+	@Id
+    @GeneratedValue(strategy = AUTO, generator = "user_seq")
+	private int id;
 	private String nom;
 	private String prenom;
 	private String password;
@@ -10,7 +26,7 @@ public class User {
 	public User() {
 	}
 
-	public User(long id, String nom, String prenom, String password) {
+	public User(int id, String nom, String prenom, String password) {
 		super();
 		this.id = id;
 		this.nom = nom;
@@ -22,7 +38,7 @@ public class User {
 		return id;
 	}
 
-	public void setId(long id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 
