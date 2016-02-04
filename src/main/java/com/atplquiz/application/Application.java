@@ -14,7 +14,7 @@ import java.sql.SQLException;
 import org.springframework.boot.CommandLineRunner;
 
 @SpringBootApplication
-@ComponentScan(basePackages ={"com.restController"})
+@ComponentScan(basePackages ={"com.atplquiz.controller"})
 public class Application implements CommandLineRunner {
 
   private static Log log = LogFactory.getLog(Application.class);
