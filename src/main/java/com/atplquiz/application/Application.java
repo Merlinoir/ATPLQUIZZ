@@ -20,14 +20,13 @@ public class Application implements CommandLineRunner {
 
   @Override
   public void run(String...strings) throws Exception{
-	  //TODO PRE-EXECUTE
+	  
   }
 
   public static void main(String[] args) {
     log.info("*** Debut Application Run ***");
     SpringApplication.run(Application.class, args);
-		// TODO
-
+		
 	}
 
 }
