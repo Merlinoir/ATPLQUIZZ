@@ -7,14 +7,10 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
-import java.util.*;
-import org.springframework.jdbc.core.RowMapper;
-import java.sql.ResultSet;
-import java.sql.SQLException;
 import org.springframework.boot.CommandLineRunner;
 
 @SpringBootApplication
-@ComponentScan(basePackages ={"com.atplquiz.controller"})
+@ComponentScan(basePackages ={"com.atplquiz.controller","com.atplquiz.service"})
 public class Application implements CommandLineRunner {
 
   private static Log log = LogFactory.getLog(Application.class);
