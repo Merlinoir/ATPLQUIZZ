@@ -1,35 +1,48 @@
 (function() {
-    'use strict';
-    angular.module("AtplQuizzApp").
-    	controller('registerController', RegisterController);
-    
-    var injectParams = ["$scope", "UserService", "$location", "usersListData"];
-    
-    /** Functions code */    
+	'use strict';
+	angular.module("AtplQuizzApp").
+	controller('registerController', RegisterController);
+
+	var injectParams = ["$scope", "$state", "UserService", "$location", "usersListData"];
+
+	/** Functions code */    
 	RegisterController.$inject = injectParams;
-	function RegisterController($scope, UserService, $location, usersListData) {
+	function RegisterController($scope, $state, UserService, $location, usersListData) {
 
 		$scope.submit = onSubmit;
 		$scope.users = usersListData;
 		
-		function onSubmit(user) {
-			console.log("dans le onSubmit");
-			user.isAdmin = false;
-			userExist(user)
-			//UserService.save(user);
-			
-	    	$location.path("/login").replace();;
+		var matching = 0;
 
+		function onSubmit(user) {
+			console.log("onSubmit from registerController");
+			user.isAdmin = false;
+			checkUniqueness(user);	
+			persistUser(user);
 		};
+
+		function checkUniqueness(data) {
+			angular.forEach(usersListData, function(user){
+				
+				if(data.pseudo === user.pseudo){
+					alert("User login already exists");
+					matching++;
+				}
+			});
+		}
 		
-		function userExist(login) {
-			
-			console.log("users : " + $scope.users);
-//			listPseudo.$promise.then(function (response){
-//				angular.forEach(response, function(pseudo){
-//					console.log("test: " + pseudo);					
-//				});
-//			});
+		function persistUser(data){
+			if(matching === 0){
+				UserService.save(data);
+				console.log("Registration done...");
+				alert("Registration done...");
+				$location.path("/login").replace();
+
+			}else{
+				console.log("Can't create "+data.pseudo+", the login already exists");
+				$state.reload();
+
+			}
 		}
 	}
 })();

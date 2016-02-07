@@ -1,17 +1,15 @@
 <div class="container" >
     
 
-    <form class="form-signin" ng-model="registerController.user" role="form">
-                    <h3 >Inscription à ATPL QUIZZ</h3></br></br></br></br>
+    <form class="form-signin" name="userForm" ng-model="registerController.user" role="form">
+                    <h3 >Formulaire d'inscription</h3></br></br></br>
+                    
                     <label class="required" for="username">Votre login QUIZZ</label>
-                    <input class="form-control" id="username" ng-model="registerController.user.pseudo" type="text" name="username" placeholder="exemple&nbsp;: jdupont" required="" aria-required="true" aria-describedby="username-tip"></br>
+                    <input class="form-control" id="username" ng-model="registerController.user.pseudo" type="text" name="username" placeholder="exemple&nbsp;: jdupont">
+                    </br>
                     <label class="required" for="password">Votre mot de passe</label>
                     <input type="password" id="inputPassword" ng-model="registerController.user.password" class="form-control" placeholder="Mot de passe" required>
-                    <div class="checkbox">
-                      <label>
-                       <!-- <input type="checkbox" value="remember-me"> Remember me
-                      </label> si on a le temps de faire mumuse avec des sessions-->
-                    </div>
+                    </br>                  
                     <button class="btn btn-lg btn-primary btn-block" type="submit" ng-click="submit(registerController.user)">S'inscrire</button></br></br>
     </form>
             
