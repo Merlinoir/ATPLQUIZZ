@@ -1,13 +1,13 @@
 (function() {
     'use strict';
     angular.module("AtplQuizzApp").
-    	controller('userController', function ($scope, GlobalService) {
-//	$scope.users = [];
+    	controller('userController', function ($rootScope, $scope) {
+	$scope.user = $rootScope.user;
 
-	GlobalService.query(function(users){
-		$scope.users = users;
-	});
-	console.log($scope.users);
+//	GlobalService.query(function(users){
+//		$scope.users = users;
+//	});
+//	console.log($scope.users);
 	
 //	var response = $http.get("/users");
 //

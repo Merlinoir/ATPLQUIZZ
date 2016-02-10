@@ -11,7 +11,9 @@
 //    '$rootScope', 
 //    '$state', 
 //    '$stateParams'
-    
+    controller('first', function ($rootScope) {
+    	$rootScope.correctLogin = false;
+    }).
 		config(defaultRoute).
 		run(function($rootScope, $state, $stateParams) {
 			$rootScope.$state = $state;
@@ -37,10 +39,11 @@
 					templateUrl : 'js/note/view/mesNotes.html',
 					controller : 'noteController'
 				}).
-				state('users', {
-					url:'/users',
+				state('user', {
+					url:'/user',
 					templateUrl : 'js/user/view/user.html',
 					controller : 'userController'
+
 				}).
 				state('themes', {
 					url:'/themes',

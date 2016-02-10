@@ -7,6 +7,6 @@
         'AtplQuizz.globalController',
         'AtplQuizz.globalService',
         'ui.router'
-    ]);
+    ])
 })();
     

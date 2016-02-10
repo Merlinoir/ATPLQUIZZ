@@ -1,20 +1,25 @@
 <h2>Users</h2>
 <div ng-controller="userController">
-	<table>
-		<tr>
-			<th></th>
-			<th>Pseudo</th>
-			<th>Password</th>
-			<th></th>
-		</tr>
-		<tr ng-repeat="user in users">
-			<td><a href="#/users/{{user.id}}">{{user.id}}</a></td>
-			<td>{{user.pseudo}}</td>
-     	    <td>{{user.password}}</td>
-			<td><a href="#/delete/{{user.id}}">X</a></td>
-		</tr>
-		<tr>
-			<td colspan="3"><a href="#/new">+</a></td>
-		</tr>
-	</table>
+<h1>Bienvenue {{user.pseudo}}</h1>
+
+<div>
+<h3> Vous pouvez acceder à vos : <br> <a href="#/mesNotes">notes</a><br> ou demarrer un <a href="#/quizz">quizz</a>
+</h3></div>
+<!-- 	<table> -->
+<!-- 		<tr> -->
+<!-- 			<th></th> -->
+<!-- 			<th>Pseudo</th> -->
+<!-- 			<th>Password</th> -->
+<!-- 			<th></th> -->
+<!-- 		</tr> -->
+<!-- 		<tr ng-repeat="user in users"> -->
+<!-- 			<td><a href="#/users/{{user.id}}">{{user.id}}</a></td> -->
+<!-- 			<td>{{user.pseudo}}</td> -->
+<!--      	    <td>{{user.password}}</td> -->
+<!-- 			<td><a href="#/delete/{{user.id}}">X</a></td> -->
+<!-- 		</tr> -->
+<!-- 		<tr> -->
+<!-- 			<td colspan="3"><a href="#/new">+</a></td> -->
+<!-- 		</tr> -->
+<!-- 	</table> -->
 </div>

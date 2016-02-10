@@ -7,14 +7,7 @@
     			query: {method:'GET', isArray:true},
     			save: {method:'POST'}
     		});
-    	}]).
-    factory('LoginService', ['$resource', function ($resource) {
-    	return $resource(
-    	        '/users/loginUser', {}, {
-    			query: {method:'GET'}
-    		});
-    	}]);
-    
+    	}]);   
 })();
 
 	

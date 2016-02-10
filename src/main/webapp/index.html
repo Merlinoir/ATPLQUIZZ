@@ -66,16 +66,22 @@
                         <a href="#page-top"></a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#login">SE CONNECTER</a>
+                        <a href="#user" ng-show="correctLogin">{{user.pseudo}}</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#register">S'ENREGISTRER</a>
+                        <a href="#logOut" ng-show="correctLogin">SE DECONNECTER</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#themes" class="menuqcm" style="visibility:hidden;" >QCM</a>
+                        <a href="#login" ng-show="!correctLogin">SE CONNECTER</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#mesNotes" class="menuqcm" style="visibility:hidden;">MES NOTES</a>
+                        <a href="#register" ng-show="!correctLogin">S'ENREGISTRER</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#themes" ng-show="correctLogin">QCM</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#mesNotes" ng-show="correctLogin">MES NOTES</a>
                     </li>
                 </ul>
             </div>
@@ -149,7 +155,7 @@
 	<script type="text/javascript" src="js/atplQuizzGlobalController.js"></script>
 	<script type="text/javascript" src="js/atplQuizzGlobalService.js"></script>
 	<script type="text/javascript" src="js/register/controller/registerController.js"></script>
-	<script type="text/javascript" src="js/user/controller/userController.js"></script>
+	
     <!-- jQuery -->
     <script src="js/libs/jquery.js"></script>
 
@@ -165,9 +171,14 @@
     <!-- Custom Theme JavaScript -->
     <script src="js/libs/atplQuizz.js"></script>
     
+<!--    Login import -->
+    
     <script type="text/javascript" src="js/login/controller/loginController.js"></script>
+    <script type="text/javascript" src="js/login/service/loginService.js"></script>
     
+<!--     User import -->
     
+	<script type="text/javascript" src="js/user/controller/userController.js"></script>
 
 </body>
 

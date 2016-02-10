@@ -1,28 +1,25 @@
 (function() {
     'use strict';
     angular.module("AtplQuizzApp").
-	    controller('userLoginController', function ($scope, LoginService, GlobalService) {
-	    	console.log("toto");
-	    	$scope.test = function(){
+	    controller('userLoginController', function ($rootScope, $scope, LoginService, $location) {
 	    	
-	    		GlobalService.query(function(users){
-	    			$scope.users = users;
-	    		});
-	    		console.log($scope.users);
-	    		
-//	    	var login = $scope.inputId;
-//	    	var pwd = $scope.inputPassword;
+	    	$scope.login = function(){
 	    	var param = {
 	    		login : $scope.form.inputPseudo,
 	    		password : $scope.form.inputPassword
 	    	} 
-	    	LoginService.query(param, function(user){
-	    		$scope.user = user;
-	    		console.log("Test");
-	    	});
 	    	
-	    	
-	    	
-	    	}
+	    	$scope.user = LoginService.query(param);
+	    	$scope.user.$promise.then(function(user){
+	    		if(user.id != null){
+	    		$rootScope.user = user;
+	    		console.log($rootScope.user);
+	    		$rootScope.correctLogin = true;
+	    		$location.path("/user");
+	    		}
+	    	}, function(error){
+	    		console.log("error");
+		    	});
+	    	 };
 	    });
 })();

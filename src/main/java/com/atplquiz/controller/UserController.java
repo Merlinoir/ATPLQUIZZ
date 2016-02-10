@@ -7,6 +7,7 @@ import java.util.List;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.http.MediaType;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
@@ -104,19 +105,26 @@ public class UserController {
 		  @ResponseBody
 		  public User loginUser(@RequestParam(value = "login") String login, @RequestParam(value = "password") String password){
 			
-			 String sql = "select * from user_table where pseudo=? and password=?";
+			String sql = "select * from user_table where pseudo=? and password=?";
 			
-			   User user = jdbcTemplate.queryForObject(sql, new Object[]{login, password}, new RowMapper<User>() {
+			try{
+			 
+			 	 User user = jdbcTemplate.queryForObject(sql, new Object[]{login, password}, new RowMapper<User>() {
 			            public User mapRow(ResultSet rs, int rowNum) throws SQLException {
 			            	User user = new User();
-			                user.setId(rs.getInt("id_user"));
+			                user.setId(rs.getLong("id_user"));
 			                user.setPseudo(rs.getString("pseudo"));
 			                user.setPassword(rs.getString("password"));
-							user.setIsAdmin(rs.getBoolean("isAdmin"));
 			                return user;
 			            }
+			            
 			        });
+			   System.out.println("userTEst :"+user);
 			   return user;
+			   }catch (EmptyResultDataAccessException e) {
+				   return null;
+			   }
+			   
 		  }
 		
 	@RequestMapping(value = "/{userId}", method = RequestMethod.DELETE)
