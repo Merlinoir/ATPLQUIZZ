@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -110,4 +111,25 @@ public class ReponseController {
 				new Object[] { id }
 				);
 	}
+	
+	@RequestMapping(value="pickReponseForQCM", method=RequestMethod.GET)
+	  @ResponseBody
+	  public List<Reponse> reponseForQcm(@RequestParam(value = "idQuestionForAnswer") long idQuestionForAnswer){
+		
+	 String sqlReponse = "select id_reponse, libelle_reponse, veracite from reponse where id_question=?";
+		
+	 
+		List<Reponse> reponseForSelectedQuestion = jdbcTemplate.query(sqlReponse, new Object[]{idQuestionForAnswer}, new RowMapper<Reponse>() {
+	            public Reponse mapRow(ResultSet rs, int rowNum) throws SQLException {
+	            	Reponse reponse = new Reponse();
+	            	reponse.setId(rs.getLong("id_reponse"));
+	            	reponse.setLibelleReponse(rs.getString("libelle_reponse"));
+					reponse.setVeracite(rs.getBoolean("veracite"));
+					reponse.setIdQuestion(rs.getLong("id_question"));
+	                return reponse;
+	            }
+	        });
+		System.out.println("All reponse : "+reponseForSelectedQuestion);
+		return reponseForSelectedQuestion;
+		}
 }

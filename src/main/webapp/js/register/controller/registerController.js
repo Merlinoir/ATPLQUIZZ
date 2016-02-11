@@ -1,7 +1,7 @@
 (function() {
     'use strict';
     angular.module("AtplQuizzApp").
-    	controller('themeController', function ($scope) {
+    	controller('registerController', function ($scope) {
   
     });
 })();

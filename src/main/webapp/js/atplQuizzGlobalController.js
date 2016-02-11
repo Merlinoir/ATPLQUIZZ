@@ -22,7 +22,7 @@
 		
 		defaultRoute.$inject = ['$stateProvider'];
 				
-		function defaultRoute($stateProvider) {
+		function defaultRoute($stateProvider, QcmByThemeService, ReponseForQuestion) {
 			$stateProvider.
 				state('login', {
 					url:'/login',
@@ -49,6 +49,35 @@
 					url:'/themes',
 					templateUrl : 'js/theme/view/themes.html',
 					controller : 'themeController'
+				}).
+				state('qcm', {
+					url:'/qcm/:idtheme',
+					templateUrl : 'js/qcm/view/qcm.html',
+					resolve : {
+						qcmResource : 'QcmByThemeService',
+						reponseResource: 'ReponseForQuestion',
+						
+						qcm : function(qcmResource, $stateParams){
+							var params = {
+									idTheme : $stateParams.idtheme
+							}
+							
+							return qcmResource.query(params).$promise;
+						},
+				
+						reponse : function(reponseResource, qcm){
+								
+							qcm.forEach(function(question){
+				    			$scope.listIdQuestion.push(question.id);
+				    		});
+				    		var param = {
+				    				idQuestionForAnswer : $scope.listIdQuestion
+				    		};
+							
+							return reponseResource.query(param).$promise;
+					}
+				},
+				controller : 'qcmController'
 				});
 				
 //			$routeProvider.otherwise('/');
