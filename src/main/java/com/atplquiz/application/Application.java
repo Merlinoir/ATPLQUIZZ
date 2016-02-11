@@ -10,7 +10,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 @SpringBootApplication
-@ComponentScan(basePackages ={"com.atplquiz.controller"})
+@ComponentScan(basePackages ={"com.atplquiz.controller","com.atplquiz.service"})
 public class Application implements CommandLineRunner {
 
   private static Log log = LogFactory.getLog(Application.class);
