@@ -19,8 +19,6 @@ public class QuestionService {
 
 	public List<Question> findAll() {
 		// REQUETE
-		System.out.println("findALL du Service");
-		System.out.println(jdbcTemplate);
 		List<Question> questions = this.jdbcTemplate.query("select * from question", new RowMapper<Question>() {
 			public Question mapRow(ResultSet rs, int rowNum) throws SQLException {
 				Question question = new Question();
