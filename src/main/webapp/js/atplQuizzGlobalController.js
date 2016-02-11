@@ -1,4 +1,3 @@
-//var atplQuizzAppModule = angular.module('atplQuizzApp', ['ngRoute', 'ngResource']);
 (function() {
     'use strict';
     
