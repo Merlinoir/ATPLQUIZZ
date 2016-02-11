@@ -2,7 +2,9 @@
     'use strict';
     angular.module("AtplQuizzApp").
     	controller('userController', function ($rootScope, $scope) {
+    		$scope.correctLogin = $rootScope.correctLogin;
 	$scope.user = $rootScope.user;
+	
 
 //	GlobalService.query(function(users){
 //		$scope.users = users;
