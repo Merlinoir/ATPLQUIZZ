@@ -7,6 +7,8 @@
         'AtplQuizz.globalController',
         'AtplQuizz.globalService',
         'ui.router'
-    ])
+    ]).controller('first', function ($rootScope) {
+    	$rootScope.correctLogin = false;
+    });
 })();
     

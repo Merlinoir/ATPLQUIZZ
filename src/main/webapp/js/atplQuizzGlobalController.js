@@ -32,7 +32,7 @@
 				state('register', {
 					url:'/register',
 					templateUrl : 'js/register/view/register.html',
-					controller : 'registrationController'
+					controller : 'registerController'
 				}).
 				state('notes', {
 					url:'/notes',
@@ -63,20 +63,8 @@
 							}
 							
 							return qcmResource.query(params).$promise;
-						},
-				
-						reponse : function(reponseResource, qcm){
-								
-							qcm.forEach(function(question){
-				    			$scope.listIdQuestion.push(question.id);
-				    		});
-				    		var param = {
-				    				idQuestionForAnswer : $scope.listIdQuestion
-				    		};
-							
-							return reponseResource.query(param).$promise;
-					}
-				},
+						}
+					},
 				controller : 'qcmController'
 				});
 				

@@ -1,7 +1,7 @@
 (function() {
     'use strict';
     angular.module("AtplQuizzApp").
-	    controller('userLoginController', function ($rootScope, $scope, LoginService, $location) {
+	    controller('userLoginController', function ($rootScope, $scope, $location, LoginUserService) {
 	    	
 	    	$scope.login = function(){
 	    	var param = {
@@ -9,7 +9,7 @@
 	    		password : $scope.form.inputPassword
 	    	} 
 	    	
-	    	$scope.user = LoginService.query(param);
+	    	$scope.user = LoginUserService.query(param);
 	    	$scope.user.$promise.then(function(user){
 	    		if(user.id != null){
 	    		$rootScope.user = user;

@@ -116,7 +116,15 @@ public class ReponseController {
 	  @ResponseBody
 	  public List<Reponse> reponseForQcm(@RequestParam(value = "idQuestionForAnswer") long idQuestionForAnswer){
 		
-	 String sqlReponse = "select id_reponse, libelle_reponse, veracite from reponse where id_question=?";
+//		List<Long> idQuestionForAnswer = new ArrayList<Long>();
+//		for (int i : question) {
+//			  questionForQcm.add(allQuestionForQcm.get(nb));
+//			  idQuestionForAnswer.add(allQuestionForQcm.get(nb).getId());
+//			}
+		
+		System.out.println("ID QUESTION : "+idQuestionForAnswer);
+	
+	 String sqlReponse = "select id_reponse, libelle_reponse, veracite, id_question from reponse where id_question=?";
 		
 	 
 		List<Reponse> reponseForSelectedQuestion = jdbcTemplate.query(sqlReponse, new Object[]{idQuestionForAnswer}, new RowMapper<Reponse>() {

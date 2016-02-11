@@ -1,11 +1,12 @@
 (function() {
     'use strict';
     angular.module("AtplQuizzApp").
-    	controller('qcmController', ['$scope', 'qcm','ResponseForQuestion', function ($scope, qcm, ResponseForQuestion) {
+    	controller('qcmController', function ($scope, qcm, reponse) {
     		
     		$scope.listIdQuestion = [];
     		
     		console.log(qcm);
+    		console.log(reponse);
     		angular.forEach(qcm, function(question){
     			$scope.listIdQuestion.push(question.id);
     		});
@@ -14,12 +15,9 @@
     		};
     		$scope.lancerQCM = function(){
     		
-    			ResponseForQuestion.query(param, function(reponses){
-        			$scope.allReponses = reponses;
-        		});
     			
     		};
     		
     		
-    }]);
+    });
 })();	
