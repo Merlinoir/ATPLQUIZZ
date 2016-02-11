@@ -39,7 +39,7 @@ public class QcmService {
 		// Extraire 10 Questions e math.random
 		
 		while (randomQuestions.size() != NB_QUESTIONS) {
-			int index = randomWithRange(0, questions.size());
+			int index = randomWithRange(0, questions.size()-1);
 			if (!randomQuestions.contains(questions.get(index))) {
 				randomQuestions.add(questions.get(index));
 			}
@@ -48,7 +48,7 @@ public class QcmService {
 		if (randomQuestions != null && randomQuestions.size()==NB_QUESTIONS){
 			for (Question question :randomQuestions){
 				
-				answersToRandomQuestion = retreiveAnswersByQuestion(question);
+				answersToRandomQuestion = findAnswerByIdQuestion(question.getId());
 				questionReponseList.add(new QuestionReponse(question, answersToRandomQuestion));
 			}
 			
@@ -66,15 +66,6 @@ public class QcmService {
 	
 	
 	
-	public List<Reponse> retreiveAnswersByQuestion(Question question){
-		
-		if (question != null){
-				long idQuestion= question.getId();
-				answersToRandomQuestion.addAll(findAnswerByIdQuestion(idQuestion));
-		}
-		
-		return answersToRandomQuestion;
-	}
 	
 
 	public List<Question> findQuestionByThemeId(long id) {

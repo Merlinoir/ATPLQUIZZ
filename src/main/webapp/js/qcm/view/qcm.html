@@ -6,3 +6,30 @@
 </h3>
 <button ng-click="lancerQCM()"></button>
 </div>
+
+  <div class="container">
+          <h3>10<br><br>Droit aérien et procédures du contrôle de la circulation aérienne</h3>
+          </br>
+
+        <form>
+          <table  ng-repeat = "QR in qcm" class="table table-bordered">
+            <thead>
+              <tr>
+                <th class="idQuestion">{{QR.question.id}}</th>
+                <th class="idQuestion">{{QR.question.libelleQuestion}}</th>
+              </tr>
+            </thead>
+               
+            <tbody>
+            <div class="btn-group" data-toggle="buttons" id="group1">
+              <tr class="fondTableau" ng-repeat="reponse in QR.listReponse">
+                <th scope="row" id="label"><input type="radio" name="gridRadios" id="gridRadiosA" value="A"> A</th>
+                <td>{{reponse.libelleReponse}}</td>
+              </tr>
+   			 </div>
+            </tbody>
+          </table>
+          </form>
+
+</div>
+</div>
