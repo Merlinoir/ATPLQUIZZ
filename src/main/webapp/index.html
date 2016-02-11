@@ -66,22 +66,22 @@
                         <a href="#page-top"></a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#user" ng-show="correctLogin">{{user.pseudo}}</a>
+                        <a href="#user" ng-hide="!correctLogin">{{user.pseudo}}</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#logOut" ng-show="correctLogin">SE DECONNECTER</a>
+                        <a href="#logOut" ng-hide="!correctLogin">SE DECONNECTER</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#login" ng-show="!correctLogin">SE CONNECTER</a>
+                        <a href="#login" ng-hide="correctLogin">SE CONNECTER</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#register" ng-show="!correctLogin">S'ENREGISTRER</a>
+                        <a href="#register" ng-hide="correctLogin">S'ENREGISTRER</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#themes" ng-show="correctLogin">QCM</a>
+                        <a href="#themes" ng-hide="!correctLogin">QCM</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#mesNotes" ng-show="correctLogin">MES NOTES</a>
+                        <a href="#mesNotes" ng-hide="!correctLogin">MES NOTES</a>
                     </li>
                 </ul>
             </div>

@@ -6,8 +6,6 @@
     $scope.themeSelected = function(idThemeSelected){
     	$scope.idTheme = idThemeSelected;
     	$location.path("/qcm/"+$scope.idTheme);
-    };
-    		
-    
+    }; 
     });
 })();	
