@@ -1,16 +1,10 @@
 (function() {
     'use strict';
     angular.module('AtplQuizz.globalService', []).
-    factory('QcmByThemeService', ['$resource', function ($resource) {
+    factory('QuestionnaireByThemeService', ['$resource', function ($resource) {
     	return $resource(
-    	        '/question/pickQuestionByThemeForQCM', {}, {
+    	        '/qcm/getQuestionnaire', {}, {
     			query: {method:'GET', isArray: true}
     		});
-    	}]).
-    	factory('ReponseForQuestion', ['$resource', function ($resource) {
-        	return $resource(
-        	        '/reponse/pickReponseForQCM', {}, {
-        			query: {method:'GET', isArray: true}
-        		});
-        }]);
+    	}]);
 })();

@@ -1,5 +1,8 @@
 (function() {
+<<<<<<< HEAD
 
+=======
+>>>>>>> a72f3d95feaf008e380b71146061f794d3e8e5b9
 	'use strict';
 	angular.module("AtplQuizzApp").
 	controller('registerController', RegisterController);

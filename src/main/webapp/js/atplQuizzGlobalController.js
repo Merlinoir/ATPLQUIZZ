@@ -21,7 +21,7 @@
 		
 		defaultRoute.$inject = ['$stateProvider'];
 				
-		function defaultRoute($stateProvider, QcmByThemeService) {
+		function defaultRoute($stateProvider, QuestionnaireByThemeService) {
 			$stateProvider.
 				state('login', {
 					url:'/login',
@@ -60,7 +60,7 @@
 					url:'/qcm/:idtheme',
 					templateUrl : 'js/qcm/view/qcm.html',
 					resolve : {
-						qcmResource : 'QcmByThemeService',
+						qcmResource : 'QuestionnaireByThemeService',
 						
 						qcm : function(qcmResource, $stateParams){
 							var params = {
