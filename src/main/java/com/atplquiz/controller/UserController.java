@@ -114,7 +114,6 @@ public class UserController {
 			            	User user = new User();
 			                user.setId(rs.getLong("id_user"));
 			                user.setPseudo(rs.getString("pseudo"));
-			                user.setPassword(rs.getString("password"));
 			                return user;
 			            }
 			            
