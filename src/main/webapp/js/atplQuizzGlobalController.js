@@ -32,7 +32,14 @@
 				state('register', {
 					url:'/register',
 					templateUrl : 'js/register/view/register.html',
-					controller : 'registerController'
+					controller : 'registerController',
+					resolve: {
+						// Permet de ne basculer vers la liste des users QUE quand les informations sont dispo. Pas avant ! 
+						usersListData : function(UserService) {
+							var UListData = UserService.query();
+							return UListData.$promise;
+						}
+					}  
 				}).
 				state('notes', {
 					url:'/notes',

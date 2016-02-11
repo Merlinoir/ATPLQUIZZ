@@ -26,11 +26,11 @@ import com.atplquiz.entity.User;
 public class UserController {
 
 	private static Log log = LogFactory.getLog(UserController.class);
-
+	
 	@Autowired
 	JdbcTemplate jdbcTemplate;
 
-	  @RequestMapping(method = RequestMethod.GET)
+	  @RequestMapping(value = "", method = RequestMethod.GET)
 	  public List<User> findAll(){
 	    // REQUETE
 	    List<User> users = this.jdbcTemplate.query(
@@ -74,7 +74,7 @@ public class UserController {
 	        return users;
 	  }
 
-		@RequestMapping(value="create", method=RequestMethod.PUT, consumes = MediaType.APPLICATION_JSON_VALUE)
+		@RequestMapping(value = "", method=RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
 	  @ResponseBody
 	  public User createUser (@RequestBody User user){
 		  log.info("Creating user :" + user.toString());
@@ -87,7 +87,7 @@ public class UserController {
 
 		}
 
-		@RequestMapping(value="update", method=RequestMethod.PUT, consumes = MediaType.APPLICATION_JSON_VALUE)
+		@RequestMapping(value = "", method=RequestMethod.PUT, consumes = MediaType.APPLICATION_JSON_VALUE)
 	  @ResponseBody
 	  public User updateUser(@RequestBody User user){
 		  log.info("User before update : "+user.toString());
