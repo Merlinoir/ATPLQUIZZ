@@ -10,7 +10,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 @SpringBootApplication
-@ComponentScan(basePackages ={"com.atplquiz.controller"})
+@ComponentScan(basePackages ={"com.atplquiz.controller","com.atplquiz.service"})
 public class Application implements CommandLineRunner {
 
   private static Log log = LogFactory.getLog(Application.class);
@@ -20,14 +20,13 @@ public class Application implements CommandLineRunner {
 
   @Override
   public void run(String...strings) throws Exception{
-	  //TODO PRE-EXECUTE
+	  
   }
 
   public static void main(String[] args) {
     log.info("*** Debut Application Run ***");
     SpringApplication.run(Application.class, args);
-		// TODO
-
+		
 	}
 
 }

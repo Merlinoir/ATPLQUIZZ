@@ -1,22 +1,28 @@
-<div class="container">
-    
-
-    <form class="form-signin">
-                    <h3 >Inscription à ATPL QUIZZ</h3></br></br></br></br>
-                    <label class="required" for="email">Votre adresse email</label>
-                    <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus></br>
-                    <label class="required" for="name">Votre nom complet</label>
-                    <input class="form-control" id="name" type="text" name="name" value="" placeholder="exemple : Marie Dupont" required="" aria-required="true" aria-describedby="name-tip"></br>
-                    <label class="required" for="username">Votre login QUIZZ</label>
-                    <input class="form-control" id="username" type="text" name="username" value="" placeholder="exemple&nbsp;: jdupont" required="" aria-required="true" aria-describedby="username-tip"></br>
-                    <label class="required" for="password">Votre mot de passe</label>
-                    <input type="password" id="inputPassword" class="form-control" placeholder="Mot de passe" required>
-                    <div class="checkbox">
-                      <label>
-                       <!-- <input type="checkbox" value="remember-me"> Remember me
-                      </label> si on a le temps de faire mumuse avec des sessions-->
-                    </div>
-                        <button class="btn btn-lg btn-primary btn-block" onclick="javascript:afficher_cacher();"type="submit">S'inscrire</button></br></br>
-    </form>
-            
+<div>
+	<section>
+		<div class="container">
+			<div class="row">
+				<form class="form-signin" name="userForm"
+					ng-model="registerController.user" role="form">
+					<h3 class="form-signin-heading">Formulaire d'inscription</h3>
+					</br> <label class="required" for="username">Votre login QUIZZ</label> <input
+						class="form-control" id="username"
+						ng-model="registerController.user.pseudo" type="text"
+						name="username" placeholder="exemple&nbsp;: jdupont" required
+						autofocus> </br> <label class="required" for="password">Votre
+						mot de passe</label> <input type="password" id="inputPassword"
+						ng-model="registerController.user.password" class="form-control"
+						placeholder="Mot de passe" required>
+					<div class="checkbox">
+						<label> 
+						<!-- <input type="checkbox" value="remember-me"> Remember me -->
+						<!-- </label> si on a le temps de faire mumuse avec des sessions -->
+					</div>
+					<button class="btn btn-lg btn-primary btn-block" type="submit"
+						ng-click="submit(registerController.user)">S'inscrire</button>
+					</br> </br>
+				</form>
+			</div>
+		</div>
+	</section>
 </div>
