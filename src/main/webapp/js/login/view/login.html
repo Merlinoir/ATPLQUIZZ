@@ -4,6 +4,8 @@
 			<div class="row">
 				<form class="form-signin">
 					<h3 class="form-signin-heading">Bienvenue</h3>
+					<div  id="warningMessage" class="alert alert-danger" role="alert" style="display: none;">
+					<p>Login ou mot de passe incorrect</p></div>
 					</br> <label for="inputPseudo" class="required">Entrez votre
 						login</label> <input type="text" ng-model="form.inputPseudo"
 						class="form-control" placeholder="Nickname" required autofocus>
@@ -17,12 +19,6 @@
                         <button ng-click="login()" class="btn btn-lg btn-primary btn-block" type="submit">Se connecter</button>
              </form>
             </div>
-            
-            
         </div>
     </section>
 </div>    
-<<<<<<< HEAD
-
-=======
->>>>>>> a72f3d95feaf008e380b71146061f794d3e8e5b9

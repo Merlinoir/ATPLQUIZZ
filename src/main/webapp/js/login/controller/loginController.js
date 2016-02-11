@@ -8,22 +8,22 @@
 	    		login : $scope.form.inputPseudo,
 	    		password : $scope.form.inputPassword
 	    	} 
-	    	
 	    	$scope.user = LoginService.query(param);
 	    	$scope.user.$promise.then(function(user){
 	    		if(user.id != null){
-	    		$rootScope.user = user;
-	    		console.log($rootScope.user);
-	    		$rootScope.correctLogin = true;
-	    		$location.path("/user");
+		    		$rootScope.user = user;
+		    		console.log($rootScope.user);
+		    		$rootScope.correctLogin = true;
+		    		$location.path("/user");
+	    		}else{
+	    			$scope.form.inputPseudo = '';
+	    			$scope.form.inputPassword = '';
+	    			document.getElementById("warningMessage").style.display = "block";
+	    			$rootScope.user =  null;
 	    		}
 	    	}, function(error){
 	    		console.log("error");
 		    	});
 	    	 };
 	    });
-<<<<<<< HEAD
-=======
-
->>>>>>> a72f3d95feaf008e380b71146061f794d3e8e5b9
 })();
