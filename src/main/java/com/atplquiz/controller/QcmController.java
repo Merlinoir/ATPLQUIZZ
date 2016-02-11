@@ -15,10 +15,13 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.atplquiz.entity.Qcm;
+import com.atplquiz.entity.QuestionReponse;
+import com.atplquiz.service.QcmService;
 
 
 @RestController
@@ -30,6 +33,8 @@ public class QcmController {
 	@Autowired
 	JdbcTemplate jdbcTemplate;
 
+	private QcmService qcmService;
+	
 	@RequestMapping(value="/all", method = RequestMethod.GET)
 	public List<Qcm> findAll(){
 		// REQUETE
@@ -108,4 +113,14 @@ public class QcmController {
 				new Object[] { id }
 				);
 	}
+	
+	@RequestMapping(value="getQuestionnaire", method=RequestMethod.GET)
+	  @ResponseBody
+	  public List<QuestionReponse> QuestionnaireByTheme(@RequestParam(value = "idTheme") long idTheme){
+		
+		qcmService = new QcmService(jdbcTemplate);
+		  return qcmService.generateQuestionReponseByTheme(idTheme);
+		
+	}
+	
 }

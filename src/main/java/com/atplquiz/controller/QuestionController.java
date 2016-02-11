@@ -9,8 +9,6 @@ import java.util.List;
 import java.util.Random;
 import java.util.Set;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.http.MediaType;
@@ -34,9 +32,7 @@ public class QuestionController {
 	
 	@Autowired
 	JdbcTemplate jdbcTemplate;
-
-	private static Log log = LogFactory.getLog(QuestionController.class);
-	
+ 
 	private QuestionService qs;
 
 	  @RequestMapping(value="/all", method = RequestMethod.GET)
