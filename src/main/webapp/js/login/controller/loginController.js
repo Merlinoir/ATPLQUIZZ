@@ -1,7 +1,11 @@
 (function() {
     'use strict';
     angular.module("AtplQuizzApp").
+<<<<<<< HEAD
 	    controller('loginController', function ($rootScope, $scope, $location, LoginUserService) {
+=======
+	    controller('loginController', function ($rootScope, $scope, LoginService, $location) {
+>>>>>>> 57d384b30102ec7793e05305b27482c186b5cb55
 	    	
 	    	$scope.login = function(){
 	    	var param = {
