@@ -27,7 +27,7 @@
 				state('login', {
 					url:'/login',
 					templateUrl : 'js/login/view/login.html',
-					controller : 'userLoginController'
+					controller : 'loginController'
 				}).
 				state('register', {
 					url:'/register',
