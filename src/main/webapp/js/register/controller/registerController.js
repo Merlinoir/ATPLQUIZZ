@@ -17,7 +17,6 @@
 
 		function onSubmit(user) {
 			console.log("onSubmit from registerController");
-			document.getElementById("warningMessage").style.display = "none";
 			user.isAdmin = false;
 			matching = 0;
 			checkUniqueness(user);	
@@ -26,6 +25,13 @@
 
 		function replaceURL(){
 			$location.path("/login").replace();
+		};
+		
+		function resetForm(){
+		    $scope.userForm = angular.copy($scope.originForm); 
+			document.getElementById("warningMessage").style.display = "none";
+			document.getElementById("errorMessage").style.display = "none";
+			document.getElementById("successMessage").style.display = "none";
 		};
 		
 		function checkUniqueness(data) {
@@ -37,17 +43,21 @@
 		}
 		
 		function persistUser(data){
-			if(matching === 0){
+			if(matching == 0 && angular.isDefined(data.pseudo) && angular.isDefined(data.password) ){
 				UserService.save(data);
 				console.log("Registration done...");
 				document.getElementById("successMessage").style.display = "block";
 				$timeout(replaceURL, 3000);
 
 			}else{
-				console.log("Can't create "+data.pseudo+", the login already exists");
-				document.getElementById("warningMessage").style.display = "block";
-				data.pseudo = '';
-				data.password = '';
+				if(matching != 0 && angular.isDefined(data.pseudo) && angular.isDefined(data.password) ){
+					console.log("Can't create "+data.pseudo+", the login already exists");
+					document.getElementById("warningMessage").style.display = "block";
+					$timeout(resetForm,3000);
+				}else{
+					document.getElementById("errorMessage").style.display = "block";
+					$timeout(resetForm,3000);
+				}
 			}
 		}
 	}
