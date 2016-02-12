@@ -22,7 +22,7 @@
 		
 		defaultRoute.$inject = ['$stateProvider', '$urlRouterProvider'];
 				
-		function defaultRoute($stateProvider, $urlRouterProvider, QuestionnaireByThemeService) {
+		function defaultRoute($stateProvider, QuestionnaireByThemeService) {
 			$stateProvider.
 				state('login', {
 					url:'/login',
@@ -30,9 +30,9 @@
 					controller : 'loginController'
 				}).
 				state('logout', {
-					controller: function($scope, $route) {
-						$route.reload()
-					}
+					url:'/logout',
+					templateUrl : 'js/login/view/login.html',
+					controller : 'loginController'
 				}).
 				state('register', {
 					url:'/register',
