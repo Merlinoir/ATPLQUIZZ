@@ -12,6 +12,7 @@
 //    '$stateParams'
     controller('first', function ($rootScope) {
     	$rootScope.correctLogin = false;
+    
     }).
 		config(defaultRoute).
 		run(function($rootScope, $state, $stateParams) {
@@ -19,14 +20,19 @@
 			$rootScope.$stateParams = $stateParams;
 		});
 		
-		defaultRoute.$inject = ['$stateProvider'];
+		defaultRoute.$inject = ['$stateProvider', '$urlRouterProvider'];
 				
-		function defaultRoute($stateProvider, QuestionnaireByThemeService) {
+		function defaultRoute($stateProvider, $urlRouterProvider, QuestionnaireByThemeService) {
 			$stateProvider.
 				state('login', {
 					url:'/login',
 					templateUrl : 'js/login/view/login.html',
 					controller : 'loginController'
+				}).
+				state('logout', {
+					controller: function($scope, $route) {
+						$route.reload()
+					}
 				}).
 				state('register', {
 					url:'/register',
@@ -71,8 +77,9 @@
 						}
 					},
 				controller : 'qcmController'
-				});
-				
-//			$routeProvider.otherwise('/');
+				}).
+				state("otherwise", {
+				    url: "*path"
+				});				
 		}
 })();
