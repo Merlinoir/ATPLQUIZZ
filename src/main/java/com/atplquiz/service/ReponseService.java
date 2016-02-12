@@ -9,7 +9,6 @@ import org.apache.commons.logging.LogFactory;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 
-import com.atplquiz.controller.ReponseController;
 import com.atplquiz.entity.Reponse;
 
 public class ReponseService {
@@ -107,7 +106,7 @@ public class ReponseService {
 				new RowMapper<Reponse>() {
 					public Reponse mapRow(ResultSet rs, int rowNum) throws SQLException {
 						Reponse reponse = new Reponse();
-						reponse.setId(rs.getLong("id_question"));
+						reponse.setId(rs.getLong("id_reponse"));
 						reponse.setLibelleReponse(rs.getString("libelle_reponse"));
 						reponse.setVeracite(rs.getBoolean("veracite"));
 						reponse.setIdQuestion(rs.getLong("id_question"));
