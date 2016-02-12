@@ -26,6 +26,7 @@ public class QuestionController {
  
 	private QuestionService qs;
 
+	
 	  @RequestMapping(value="/all", method = RequestMethod.GET)
 	  public List<Question> findAll(){
 		  qs = new QuestionService(jdbcTemplate);
@@ -38,6 +39,7 @@ public class QuestionController {
 		  return qs.findById(id);
 	  }
 
+
 	  @RequestMapping(value="create", method=RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
 	  @ResponseBody
 	  public Question createQuestion (@RequestBody Question question){
@@ -45,17 +47,27 @@ public class QuestionController {
 			return qs.createQuestion(question);
 		}
 
+	  
 	  @RequestMapping(value="update", method=RequestMethod.PUT, consumes = MediaType.APPLICATION_JSON_VALUE)
 	  @ResponseBody
 	  public Question updateQuestion(@RequestBody Question question){
 		  qs = new QuestionService(jdbcTemplate);
 		  return qs.updateQuestion(question);
 	  }
+	  
+	  
 
 	@RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
-	void deleteUser (@PathVariable long id) {
+	void deleteQuestion (@PathVariable long id) {
 		qs = new QuestionService(jdbcTemplate);
-		qs.deleteUser(id);
+		qs.deleteQuestion(id);
 	}
+	
+	
+	  //Fonction utilisée par le QcmService
+	  public List<Question> findByThemeId(long id){
+		  qs = new QuestionService(jdbcTemplate);
+		  return qs.findByThemeId(id);
+	  }
 }
 	
