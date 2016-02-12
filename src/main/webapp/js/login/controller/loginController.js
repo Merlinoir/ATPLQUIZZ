@@ -3,6 +3,8 @@
 	angular.module("AtplQuizzApp").
 	controller('loginController', function ($rootScope, $scope, LoginService, $location) {
 
+		$rootScope.correctLogin = false;
+
 
 		$scope.login = function() {
 			var param = {
@@ -15,8 +17,7 @@
 					function(user) {
 						if (user.id != null) {
 							$rootScope.user = user;
-							console
-							.log($rootScope.user);
+							console.log($rootScope.user);
 							$rootScope.correctLogin = true;
 							$location.path("/user");
 						} else {
