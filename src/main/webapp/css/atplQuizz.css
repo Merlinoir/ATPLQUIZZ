@@ -478,3 +478,8 @@ tr.success {
 tr.danger {
     text-align: left;
 }
+div.timal{
+	text-align : center;
+	color:white;
+	backgroung: lightslategrey;
+}
