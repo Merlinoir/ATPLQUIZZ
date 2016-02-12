@@ -1,71 +1,27 @@
 (function() {
-    'use strict';
-    angular.module("AtplQuizzApp").
-    	controller('userController', function ($rootScope, $scope) {
-    		$scope.correctLogin = $rootScope.correctLogin;
-	$scope.user = $rootScope.user;
-	
 
-//	GlobalService.query(function(users){
-//		$scope.users = users;
-//	});
-//	console.log($scope.users);
-	
-//	var response = $http.get("/users");
-//
-//	response.success(function(data, status, headers, config) {
-//		$scope.users = data;
-//	});
-//
-//	response.error(function(data, status, headers, config) {
-//		console.log("Error: ");
-//		console.dir(data);
-	});
+	'use strict';
+	angular.module("AtplQuizzApp").
+	controller('userController', userController);
+
+	var injectParams = ["$rootScope", "$scope", "$timeout", "$location", "UserService"];
+
+	/** Functions code */    
+	userController.$inject = injectParams;
+	function userController($rootScope, $scope, $timeout, $location, UserService) {
+
+		$scope.correctLogin = $rootScope.correctLogin;
+		$scope.user = $rootScope.user;
+		$scope.deleteUser = function() {
+			console.log("user deletion...");
+			UserService.delete({"user_id": $scope.user.id});
+			document.getElementById("successMessage").style.display = "block";
+			$timeout(replaceURL, 3000);
+		};
+		
+		function replaceURL(){
+			$location.path("/login").replace();
+		};
+	}
 })();
 
-//.controller('UserController', function($scope, $http, $routeParams) {
-//	$scope.user = {};
-//
-//	var response = $http.get("/users/" + parseInt ($routeParams.id, 10));
-//
-//	response.success(function(data, status, headers, config) {
-//		$scope.user = data;
-//	});
-//
-//	response.error(function(data, status, headers, config) {
-//		console.log("Error: ");
-//		console.dir(data);
-//	});
-//})
-//
-//.controller('UserFormController', function($scope, $http, $location) {
-//	$scope.submit = function() {
-//		var response = $http.put ('/users/create', {
-//			'pseudo': $scope.pseudo,
-//			'password' : $scope.password,
-//			'isAdmin' : false
-//		});
-//
-//		response.success(function(data, status, headers, config) {
-//			$location.path ('/');
-//		});
-//
-//		response.error(function(data, status, headers, config) {
-//			console.log("Error: ");
-//			console.dir(data);
-//		});
-//	};
-//})
-//
-//.controller('UserDeletionController', function ($scope, $http, $routeParams, $location) {
-//	var response = $http.delete("/users/" + parseInt ($routeParams.id, 10));
-//
-//	response.success(function(data, status, headers, config) {
-//		$location.path ('/');
-//	});
-//
-//	response.error(function(data, status, headers, config) {
-//		console.log("Error: ");
-//		console.dir(data);
-//	});
-//});
