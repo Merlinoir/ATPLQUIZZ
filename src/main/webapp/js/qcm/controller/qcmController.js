@@ -1,7 +1,27 @@
 (function() {
     'use strict';
     angular.module("AtplQuizzApp").
-    	controller('qcmController', function ($scope, qcm) {
+    	controller('qcmController', function ($scope, qcm, $location, ThemeService, $window, QuestionnaireByThemeService) {
+    		
+    		$scope.resultMode = false;
+    		$scope.notation = 20;
+    		$scope.goodAnswer = 0;
+    		$scope.finalPercent = 0;
+    		$scope.idTheme = $location.path();
+    		var afterSplit = $scope.idTheme.split("/");
+    		
+    		console.log($scope.idTheme);
+    		var param = {
+					themeId : afterSplit[2]
+			}
+			$scope.theme = ThemeService.query(param);
+			$scope.theme.$promise.then(
+					function(theme) {
+						$scope.themeFound = theme;
+					}, function(error) {
+						console.log("error");
+					});
+    		
     		$scope.qcm = qcm;
     		console.log(qcm);
     		var map = new Map();
@@ -12,16 +32,13 @@
     		};
     		
     		$scope.validate= function() {
-//    			var dir = document.getElementById('true');
-//    			dir.style.backgroundColor = 'green';
-//    			var dir2 = document.getElementById('false');
-//    			dir2.style.backgroundColor = 'red';	
 			angular.forEach(map, function(reponse ,index){
 				var caseCheck = document.getElementById(reponse.id);
 				var libelle = document.getElementById(reponse.id+'lib');
 				if (reponse.veracite == true){
 					caseCheck.style.backgroundColor = 'green';
 					libelle.style.backgroundColor = 'green';
+					$scope.goodAnswer++;
 				}else{
 					caseCheck.style.backgroundColor = 'red';
 					libelle.style.backgroundColor = 'red';
@@ -34,9 +51,21 @@
 						}
 					});
 				}
+				
 				console.log(index);
 				console.log(reponse);
 			});
+			
+			$scope.resultMode = true;
+			console.log($scope.goodAnswer);
+			$scope.finalPercent = ($scope.goodAnswer/$scope.notation)*100;
+			console.log($scope.finalPercent);
+			$window.scrollTo(0, angular.element(document.getElementById('timal')).offsetTop);
+	};
+	
+	$scope.returnToTheme = function(){
+		$location.path('/themes');
+		$scope.resultMode = false;
 	};
     		
     		

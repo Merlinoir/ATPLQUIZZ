@@ -19,7 +19,7 @@ import com.atplquiz.entity.Reponse;
 
 public class QcmService {
 
-	private final static int NB_QUESTIONS = 9;
+	private final static int NB_QUESTIONS = 20;
 
 	public QuestionService qs;
 

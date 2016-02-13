@@ -10,6 +10,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.atplquiz.controller.ThemeController;
 import com.atplquiz.entity.Theme;
@@ -37,8 +38,8 @@ public class ThemeService {
 		return themes;
 	}
 	
-	public List<Theme> findById(String themeID) {
-		List<Theme> themes = this.jdbcTemplate.query("select * from user_table where id_user=" + themeID,
+	public List<Theme> findById(@RequestParam(value = "themeId") String themeId) {
+		List<Theme> themes = this.jdbcTemplate.query("select * from theme where id_theme=" + themeId,
 				new RowMapper<Theme>() {
 					public Theme mapRow(ResultSet rs, int rowNum) throws SQLException {
 						Theme theme = new Theme();
