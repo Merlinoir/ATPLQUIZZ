@@ -19,12 +19,8 @@ import com.atplquiz.service.ThemeService;
 @RestController
 @RequestMapping("/themes")
 public class ThemeController {
-	ThemeService ts;
-
-	
-
 	@Autowired
-	JdbcTemplate jdbcTemplate;
+	ThemeService ts;
 
 	@RequestMapping(value = "/all", method = RequestMethod.GET)
 	public List<Theme> findAll() {

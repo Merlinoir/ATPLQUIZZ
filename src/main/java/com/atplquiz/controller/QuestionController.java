@@ -22,7 +22,7 @@ import com.atplquiz.service.QuestionService;
 public class QuestionController {
 	
 
- 
+	@Autowired
 	private QuestionService qs;
 
 	

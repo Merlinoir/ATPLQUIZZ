@@ -20,7 +20,7 @@ import com.atplquiz.service.ReponseService;
 @RequestMapping("/reponse")
 public class ReponseController {
 
-	
+	@Autowired
 	public ReponseService rs;
 
 	

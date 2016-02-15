@@ -26,6 +26,7 @@ import com.atplquiz.service.UserService;
 @RequestMapping("/users")
 public class UserController {
 	
+	@Autowired
 	UserService us;
 
 	  @RequestMapping(value = "", method = RequestMethod.GET)

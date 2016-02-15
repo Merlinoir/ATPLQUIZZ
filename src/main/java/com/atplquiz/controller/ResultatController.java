@@ -27,39 +27,32 @@ public class ResultatController {
 
 
 	@Autowired
-	JdbcTemplate jdbcTemplate;
-	
 	ResultatService rs;
 
 	@RequestMapping(value = "/all", method = RequestMethod.GET)
 	public List<Resultat> findAll() {
-		rs = new ResultatService(jdbcTemplate);
 		return rs.findAll();
 	}
 
 	@RequestMapping(value = "/{resultatID}", method = RequestMethod.GET)
 	public List<Resultat> findById(@PathVariable String resultatID) {
-		rs = new ResultatService(jdbcTemplate);
 		return rs.findById(resultatID);
 	}
 
 	@RequestMapping(value = "create", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
 	@ResponseBody
 	public Resultat createResultat(@RequestBody Resultat resultat) {
-		rs = new ResultatService(jdbcTemplate);
 		return rs.createResultat(resultat);
 	}
 
 	@RequestMapping(value = "update", method = RequestMethod.PUT, consumes = MediaType.APPLICATION_JSON_VALUE)
 	@ResponseBody
 	public Resultat updateResultat(@RequestBody Resultat resultat) {
-		rs = new ResultatService(jdbcTemplate);
 		return rs.updateResultat(resultat);
 	}
 
 	@RequestMapping(value = "/{themeId}", method = RequestMethod.DELETE)
 	void deleteResultat(@PathVariable long resultatId) {
-		rs = new ResultatService(jdbcTemplate);
 		rs.deleteResultat(resultatId);
 		
 	}
