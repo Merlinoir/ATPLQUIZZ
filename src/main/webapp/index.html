@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-ng-app="AtplQuizzApp" >
 
 <head>
 
@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>ATPL quizzzz</title>
+    <title>ATPL quizz</title>
 
     <!-- version compressé du css de Bootstrap pour charger plus rapidement -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -28,8 +28,19 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <script src="js/libs/angular.min.js"></script>
-    <script src="js/libs/angular-route.min.js"></script>
+       <script type="text/javascript">
+    function afficher_cacher()
+{
+    	var appBanners = document.getElementsByClassName('menuqcm'), i;
+
+    	for (var i = 0; i < appBanners.length; i ++) {
+    	    appBanners[i].style.visibility = 'visible';
+    	}
+}
+    </script>
+    
+    
+	
 </head>
 
 <body id="page-top" class="index">
@@ -45,8 +56,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#page-top"><i class="fa fa-plane"></i>
-ATPL quizzzz</a>
+                <a class="navbar-brand" href="#page-top"><i class="fa fa-plane"></i>ATPL quizz</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -56,13 +66,16 @@ ATPL quizzzz</a>
                         <a href="#page-top"></a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#portfolio">LOGIN</a>
+                        <a href="#login">SE CONNECTER</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#about">QCM</a>
+                        <a href="#register">S'ENREGISTRER</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#contact">MES NOTES</a>
+                        <a href="#themes" class="menuqcm" style="visibility:hidden;" >QCM</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#mesNotes" class="menuqcm" style="visibility:hidden;">MES NOTES</a>
                     </li>
                 </ul>
             </div>
@@ -70,7 +83,9 @@ ATPL quizzzz</a>
         </div>
         <!-- /.container-fluid -->
     </nav>
-
+<!-- 	<div ng-view> -->
+<!--         </div> -->
+        
     <!-- Header -->
     <header>
         <div class="container">
@@ -87,126 +102,9 @@ ATPL quizzzz</a>
         </div>
     </header>
 
-    <!-- Portfolio Grid Section -->
-    <section id="portfolio">
-        <div class="container">
-            <div class="row">
-               <form class="form-signin">
-                    <h3 class="form-signin-heading">Please sign in</h3>
-                    <label for="inputEmail" class="sr-only">Email address</label>
-                    <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-                    <label for="inputPassword" class="sr-only">Password</label>
-                    <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-                    <div class="checkbox">
-                      <label>
-                       <!-- <input type="checkbox" value="remember-me"> Remember me
-                      </label> si on a le temps de faire mumuse avec des sessions-->
-                    </div>
-                        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-             </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section class="success" id="about">
-
-    <div class="container">
-        <div class="row">
-            <h3>Choisissez le theme du QCM</h3>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="./img/themes/010.jpg" alt="Droit aérien et procédures du contrôle de la circulation aérienne">
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="./img/themes/021.jpg" alt="Cellule et Systèmes, électricité, motorisation et équipements de secours">
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="./img/themes/022.jpg" alt="Instrumentation">
-                </a>
-            </div>     
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="./img/themes/031.jpg" alt="Masse et centrage">
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="./img/themes/032.jpg" alt="Performances">
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="./img/themes/033.jpg" alt="Préparation et suivi du vol">
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="./img/themes/040.jpg" alt="Performance humaine et ses limites">
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="./img/themes/050.jpg" alt="Météorologie">
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="./img/themes/061.jpg" alt="Navigation générale">
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="./img/themes/062.jpg" alt="Radionavigation">
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="./img/themes/070.jpg" alt="Procédures opérationnelles">
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="./img/themes/081.jpg" alt="Mécanique du vol">
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="./img/themes/091.jpg" alt="Procédures opérationnelles">
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="./img/themes/092.jpg" alt="Procédures opérationnelles">
-                </a>
-            </div>   
-        </div>
-
-        <hr>
-
-            </div>
-           
-        </div>
-    </section>
-
-    <!-- notes Section -->
-    <section id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>Mes notes</h2>
-                    <hr class="star-primary">
-                </div>
-            </div>
-            <div class="row">
-                
-            </div>
-        </div>
-    </section>
+    <div class="col-xs-12 col-sm-9">
+					<div data-ui-view></div>
+				</div>
 
     <!-- Footer -->
     <footer class="text-center">
@@ -237,20 +135,41 @@ ATPL quizzzz</a>
 
    
 
+	<script type="text/javascript" src="js/libs/angular.js"></script>
+	<script type="text/javascript" src="js/libs/angular-route.min.js"></script>
+	<script type="text/javascript" src="js/libs/angular-ui-router.js"></script>
+	<script type="text/javascript" src="js/libs/angular-messages.min.js"></script>
+	<script type="text/javascript" src="js/libs/angular-resource.min.js"></script>
+	<script type="text/javascript" src="js/libs/ui-bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/libs/ui-bootstrap-tpls.min.js"></script>
+	
+	<script type="text/javascript" src="js/appModule.js"></script>
+	<script type="text/javascript" src="js/main/main.module.js"></script>
+	<script type="text/javascript" src="js/main/main.config.module.js"></script>
+	<script type="text/javascript" src="js/user/service/user_service.js"></script>
+	<script type="text/javascript" src="js/atplQuizzGlobalController.js"></script>
+	<script type="text/javascript" src="js/atplQuizzGlobalService.js"></script>
+	<script type="text/javascript" src="js/register/controller/registerController.js"></script>
+	<script type="text/javascript" src="js/user/controller/userController.js"></script>
+	
     <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+    <script src="js/libs/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="js/libs/bootstrap.min.js"></script>
 
     <!-- Plugin JavaScript -->
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-    <script src="js/classie.js"></script>
-    <script src="js/cbpAnimatedHeader.js"></script>
+    <script src="js/libs/classie.js"></script>
+    <script src="js/libs/cbpAnimatedHeader.js"></script>
 
     
     <!-- Custom Theme JavaScript -->
-    <script src="js/atplQuizz.js"></script>
+    <script src="js/libs/atplQuizz.js"></script>
+    
+    <script type="text/javascript" src="js/login/controller/loginController.js"></script>
+    
+    
 
 </body>
 

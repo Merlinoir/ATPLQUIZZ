@@ -19,13 +19,33 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
         <dependency>
-          <groupId>org.springframework.boot</groupId>
-          <artifactId>spring-boot-starter-actuator</artifactId>
+	        <groupId>org.springframework.boot</groupId>
+	        <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-rest</artifactId>
+        </dependency>
+        <dependency> 
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-orm</artifactId>
+            </dependency>
+        <dependency> 
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-beans</artifactId>
+            </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-jdbc</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            </dependency>
         <dependency>
 		    <groupId>org.postgresql</groupId>
 		    <artifactId>postgresql</artifactId>
@@ -35,6 +55,31 @@
           <groupId>org.springframework.boot</groupId>
           <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>servlet-api</artifactId>
+            <version>2.5</version>
+            <scope>provided</scope>
+        </dependency>
+        <!-- Hibernate -->
+        <dependency> 
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-commons-annotations</artifactId>
+            <version>3.2.0.Final</version>
+        </dependency>
+        <dependency> 
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-entitymanager</artifactId>
+            </dependency>
+        <dependency> 
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-validator</artifactId>
+            </dependency> 
+        <dependency> 
+            <groupId>org.hibernate.javax.persistence</groupId>
+            <artifactId>hibernate-jpa-2.0-api</artifactId>
+            <version>1.0.0.Final</version>
+        </dependency> 
     </dependencies>
 
     <build>
@@ -55,7 +100,6 @@
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-resources-plugin</artifactId>
-            <version>2.6</version>
             <configuration>
               <delimiters>
                 <delimiter>@</delimiter>
@@ -63,23 +107,6 @@
               <useDefaultDelimiters>false</useDefaultDelimiters>
             </configuration>
           </plugin>
-          <plugin>
-                <groupId>org.flywaydb</groupId>
-                <artifactId>flyway-maven-plugin</artifactId>
-                <version>3.2.1</version>
-                <configuration>
-                    <url>jdbc:postgresql://postgresql-projetatpl.alwaysdata.net:5432/projetatpl_db</url>
-                    <user>projetatpl</user>
-                    <password>projetatpl</password>
-                </configuration>
-                <dependencies>
-                    <dependency>
-		    			<groupId>org.postgresql</groupId>
-		    			<artifactId>postgresql</artifactId>
-		    			<version>9.4.1207.jre7</version>
-				</dependency>
-                </dependencies>
-            </plugin>
         </plugins>
     </build>
     <repositories>
