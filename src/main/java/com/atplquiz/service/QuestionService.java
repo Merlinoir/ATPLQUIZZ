@@ -4,19 +4,18 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
+import org.springframework.stereotype.Service;
+
 import com.atplquiz.entity.Question;
 
-
+@Service
 public class QuestionService {
-
+	
+	@Autowired
 	JdbcTemplate jdbcTemplate;
-
-	public QuestionService(JdbcTemplate jdbcTemplate) {
-		this.jdbcTemplate = jdbcTemplate;
-	}
-
 	
 	public List<Question> findAll() {
 		List<Question> questions = this.jdbcTemplate.query("select * from question", new RowMapper<Question>() {

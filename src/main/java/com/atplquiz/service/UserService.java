@@ -6,9 +6,11 @@ import java.util.List;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
+import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -16,15 +18,15 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.atplquiz.controller.UserController;
 import com.atplquiz.entity.User;
 
+@Service
 public class UserService {
 	
 	private static Log log = LogFactory.getLog(UserController.class);
 	
+	@Autowired
 	JdbcTemplate jdbcTemplate;
 	
-	public UserService(JdbcTemplate jdbcTemplate) {
-		this.jdbcTemplate = jdbcTemplate;
-	}
+
 	
 	public List<User> findAll(){
 	    // REQUETE
@@ -121,7 +123,5 @@ public class UserService {
 			new Object[] { userId }
 		);
 	}
-	
-	
 
 }

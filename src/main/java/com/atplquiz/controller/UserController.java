@@ -27,20 +27,14 @@ import com.atplquiz.service.UserService;
 public class UserController {
 	
 	UserService us;
-	
-	
-	@Autowired
-	JdbcTemplate jdbcTemplate;
 
 	  @RequestMapping(value = "", method = RequestMethod.GET)
 	  public List<User> findAll(){
-		  us = new UserService(jdbcTemplate);
 	      return us.findAll();
 	  }
 
 	  @RequestMapping(value="/{userID}", method = RequestMethod.GET)
 	  public List<User> findById(@PathVariable String userID){
-		  us = new UserService(jdbcTemplate);
 	      return us.findById(userID);
 	        
 	  }
@@ -48,28 +42,24 @@ public class UserController {
 		@RequestMapping(value = "", method=RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
 	  @ResponseBody
 	  public User createUser (@RequestBody User user){
-		  us = new UserService(jdbcTemplate);
 		  return us.createUser(user);
 		}
 
 		@RequestMapping(value = "", method=RequestMethod.PUT, consumes = MediaType.APPLICATION_JSON_VALUE)
 	  @ResponseBody
 	  public User updateUser(@RequestBody User user){
-		  us = new UserService(jdbcTemplate);
 		  return us.updateUser(user);
 	  }
 
 		@RequestMapping(value="loginUser", method=RequestMethod.GET)
 		  @ResponseBody
 		  public User loginUser(@RequestParam(value = "login") String login, @RequestParam(value = "password") String password){
-			us = new UserService(jdbcTemplate);
 			return us.loginUser(login, password);
 			   
 		  }
 		
 	@RequestMapping(value = "/{userId}", method = RequestMethod.DELETE)
 	void deleteUser (@PathVariable long userId) {
-		us = new UserService(jdbcTemplate);
 		us.deleteUser(userId);
 	}
 }

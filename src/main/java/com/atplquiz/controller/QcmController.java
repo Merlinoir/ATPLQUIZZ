@@ -21,23 +21,17 @@ import com.atplquiz.service.QcmService;
 @RestController
 @RequestMapping("/qcm")
 public class QcmController {
-	
-	private QcmService qs;
-
 	@Autowired
-	JdbcTemplate jdbcTemplate;
-
+	private QcmService qs;
 	
 	@RequestMapping(value="/all", method = RequestMethod.GET)
 	public List<Qcm> findAll(){
-		qs = new QcmService(jdbcTemplate);
 		  return qs.findAll();
 	}
 
 	
 	@RequestMapping(value="/{id}", method = RequestMethod.GET)
 	public List<Qcm> findById(@PathVariable String id){
-		qs = new QcmService(jdbcTemplate);
 		  return qs.findById(id);
 	}
 
@@ -45,7 +39,6 @@ public class QcmController {
 	@RequestMapping(value="create", method=RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
 	@ResponseBody
 	public Qcm createQcm (@RequestBody Qcm qcm){
-		qs = new QcmService(jdbcTemplate);
 		qs.createQcm(qcm);
 		return qcm;
 	}
@@ -54,7 +47,6 @@ public class QcmController {
 	@RequestMapping(value="update", method=RequestMethod.PUT, consumes = MediaType.APPLICATION_JSON_VALUE)
 	@ResponseBody
 	public Qcm updateQcm(@RequestBody Qcm qcm){
-		qs = new QcmService(jdbcTemplate);
 		qs.updateQcm(qcm);
 		return qcm;
 	}
@@ -62,15 +54,13 @@ public class QcmController {
 
 	@RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
 	void deleteQcm (@PathVariable long id) {
-		qs = new QcmService(jdbcTemplate);
 		qs.deleteQcm(id);		
 	}
 	
 	
 	@RequestMapping(value="getQuestionnaire", method=RequestMethod.GET)
 	  @ResponseBody
-	  public List<QuestionReponse> QuestionnaireByTheme(@RequestParam(value = "idTheme") long idTheme){
-		qs = new QcmService(jdbcTemplate);
+	  public List<QuestionReponse> questionnaireByTheme(@RequestParam(value = "idTheme") long idTheme){
 		  return qs.generateQuestionReponseByTheme(idTheme);
 	}
 	

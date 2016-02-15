@@ -1,27 +1,28 @@
 package com.atplquiz.service;
 
 import java.sql.ResultSet;
+
 import java.sql.SQLException;
 import java.util.List;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
+import org.springframework.stereotype.Service;
 
 import com.atplquiz.entity.Reponse;
 
+
+@Service
 public class ReponseService {
 	
+	@Autowired
 	JdbcTemplate jdbcTemplate;
 
 	private static Log log = LogFactory.getLog(ReponseService.class);
-	
 
-	
-	public ReponseService(JdbcTemplate jdbcTemplate) {
-		this.jdbcTemplate = jdbcTemplate;
-	}
 	
 	public List<Reponse>findAll(){
 				List<Reponse> reponses = this.jdbcTemplate.query(
@@ -77,7 +78,7 @@ public class ReponseService {
 	}
 	
 	
-	public Reponse updapteReponse(Reponse reponse){
+	public Reponse updateReponse(Reponse reponse){
 		log.info("Réponse before update : "+reponse.toString());
 		final long id = reponse.getId();
 		final String libelleReponse = reponse.getLibelleReponse();

@@ -20,22 +20,18 @@ import com.atplquiz.service.ReponseService;
 @RequestMapping("/reponse")
 public class ReponseController {
 
-	@Autowired
-	JdbcTemplate jdbcTemplate;
 	
 	public ReponseService rs;
 
 	
 	@RequestMapping(value="/all", method = RequestMethod.GET)
 	public List<Reponse> findAll(){
-		rs = new ReponseService(jdbcTemplate);
 		return rs.findAll();
 	}
 
 	
 	@RequestMapping(value="/{id}", method = RequestMethod.GET)
 	public List<Reponse> findById(@PathVariable String id){
-		rs = new ReponseService(jdbcTemplate);
 		return rs.findById(id);
 	}
 
@@ -43,7 +39,6 @@ public class ReponseController {
 	@RequestMapping(value="create", method=RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
 	@ResponseBody
 	public Reponse createReponse (@RequestBody Reponse reponse){
-		rs = new ReponseService(jdbcTemplate);
 		return rs.createReponse(reponse);
 	}
 	
@@ -51,24 +46,19 @@ public class ReponseController {
 	@RequestMapping(value="update", method=RequestMethod.PUT, consumes = MediaType.APPLICATION_JSON_VALUE)
 	@ResponseBody
 	public Reponse updateReponse(@RequestBody Reponse reponse){
-		rs = new ReponseService(jdbcTemplate);
-		return rs.updapteReponse(reponse);
+		return rs.updateReponse(reponse);
 	}
 	
 
 	@RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
 	void deleteReponse (@PathVariable long id) {
-		rs = new ReponseService(jdbcTemplate);
 		rs.deleteReponse(id);
 	}
 	
 	
 	//Fonction utilisée uniquement par le QcmService
 	  public List<Reponse> findReponseByIdQuestion( long id){
-		  rs = new ReponseService(jdbcTemplate);
 		  return rs.findReponseByIdQuestion(id);
 	  }
-	
-	
 	
 }

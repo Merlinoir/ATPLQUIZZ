@@ -22,16 +22,16 @@ public class User {
 	private String password;
 	private Boolean isAdmin;
 
-//	public User() {
-//	}
-//
-//	public User(long id, String pseudo, String password, Boolean isAdmin) {
-//		super();
-//		this.id = id;
-//		this.pseudo = pseudo;
-//		this.password = password;
-//		this.isAdmin = isAdmin;
-//	}
+	public User() {
+	}
+
+	public User(long id, String pseudo, String password, Boolean isAdmin) {
+		super();
+		this.id = id;
+		this.pseudo = pseudo;
+		this.password = password;
+		this.isAdmin = isAdmin;
+	}
 
 	public long getId() {
 		return id;

@@ -6,8 +6,10 @@ import java.util.List;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
+import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -15,16 +17,13 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.atplquiz.controller.ThemeController;
 import com.atplquiz.entity.Theme;
 
+@Service
 public class ThemeService {
+	@Autowired
 	JdbcTemplate jdbcTemplate;
 
 	private static Log log = LogFactory.getLog(ThemeController.class);
-	
-	public ThemeService(JdbcTemplate jdbcTemplate) {
-		this.jdbcTemplate = jdbcTemplate;
-	}
-	
-	
+		
 	public List<Theme>findAll(){
 		// REQUETE
 		List<Theme> themes = this.jdbcTemplate.query("select * from theme", new RowMapper<Theme>() {
@@ -64,7 +63,7 @@ public class ThemeService {
 		log.info("Theme before update : " + theme.toString());
 		final long id = theme.getIdTheme();
 		final String nom = theme.getNomTheme();
-		this.jdbcTemplate.update("update theme set NOM_THEME=? where ID_THEME=? ", id, nom);
+		this.jdbcTemplate.update("update theme set NOM_THEME=? where ID_THEME=? ", nom, id);
 		log.info("Theme after update : " + theme.toString());
 		return theme;
 	}

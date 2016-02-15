@@ -28,34 +28,29 @@ public class ThemeController {
 
 	@RequestMapping(value = "/all", method = RequestMethod.GET)
 	public List<Theme> findAll() {
-		ts = new ThemeService(jdbcTemplate);
 		return ts.findAll();
 	}
 
 	@RequestMapping(value = "themeByID", method = RequestMethod.GET)
 	 @ResponseBody
 	  public List<Theme> findById(@RequestParam(value = "themeId") String themeId){
-		ts = new ThemeService(jdbcTemplate);
 		return ts.findById(themeId);
 	}
 
 	@RequestMapping(value = "create", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
 	@ResponseBody
 	public Theme createTheme(@RequestBody Theme theme) {
-		ts = new ThemeService(jdbcTemplate);
 		return ts.createTheme(theme);
 	}
 
 	@RequestMapping(value = "update", method = RequestMethod.PUT, consumes = MediaType.APPLICATION_JSON_VALUE)
 	@ResponseBody
 	public Theme updateTheme(@RequestBody Theme theme) {
-		ts = new ThemeService(jdbcTemplate);
 		return ts.updateTheme(theme);
 	}
 
 	@RequestMapping(value = "/{themeId}", method = RequestMethod.DELETE)
 	void deleteTheme(@PathVariable long themeId) {
-		ts = new ThemeService(jdbcTemplate);
 		ts.deleteTheme(themeId);
 	}
 }

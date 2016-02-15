@@ -21,21 +21,18 @@ import com.atplquiz.service.QuestionService;
 @RequestMapping("/question")
 public class QuestionController {
 	
-	@Autowired
-	JdbcTemplate jdbcTemplate;
+
  
 	private QuestionService qs;
 
 	
 	  @RequestMapping(value="/all", method = RequestMethod.GET)
 	  public List<Question> findAll(){
-		  qs = new QuestionService(jdbcTemplate);
 		  return qs.findAll();
 	  }
 
 	  @RequestMapping(value="/{id}", method = RequestMethod.GET)
 	  public List<Question> findById(@PathVariable String id){
-		  qs = new QuestionService(jdbcTemplate);
 		  return qs.findById(id);
 	  }
 
@@ -43,7 +40,6 @@ public class QuestionController {
 	  @RequestMapping(value="create", method=RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
 	  @ResponseBody
 	  public Question createQuestion (@RequestBody Question question){
-			qs = new QuestionService(jdbcTemplate);
 			return qs.createQuestion(question);
 		}
 
@@ -51,7 +47,6 @@ public class QuestionController {
 	  @RequestMapping(value="update", method=RequestMethod.PUT, consumes = MediaType.APPLICATION_JSON_VALUE)
 	  @ResponseBody
 	  public Question updateQuestion(@RequestBody Question question){
-		  qs = new QuestionService(jdbcTemplate);
 		  return qs.updateQuestion(question);
 	  }
 	  
@@ -59,14 +54,12 @@ public class QuestionController {
 
 	@RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
 	void deleteQuestion (@PathVariable long id) {
-		qs = new QuestionService(jdbcTemplate);
 		qs.deleteQuestion(id);
 	}
 	
 	
 	  //Fonction utilisée par le QcmService
 	  public List<Question> findByThemeId(long id){
-		  qs = new QuestionService(jdbcTemplate);
 		  return qs.findByThemeId(id);
 	  }
 }
