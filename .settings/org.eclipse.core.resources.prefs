@@ -1,4 +1,9 @@
 eclipse.preferences.version=1
 encoding//src/main/java=UTF-8
 encoding//src/main/resources=UTF-8
+encoding//src/main/webapp/js/note/view/mesNotes.html=UTF-8
+encoding//src/main/webapp/js/qcm/view/qcm.html=UTF-8
+encoding//src/main/webapp/js/register/view/register.html=UTF-8
+encoding//src/main/webapp/js/theme/view/themes.html=UTF-8
+encoding//src/main/webapp/js/user/view/user.html=UTF-8
 encoding/<project>=UTF-8

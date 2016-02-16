@@ -1,0 +1,40 @@
+<div ng-hide="!correctLogin">
+  <div class="timal" ng-repeat="theme in themeFound">
+          <h3>{{theme.idTheme}}<br><br>{{theme.nomTheme}}</h3>
+          </br><br>
+          <div ng-show="resultMode"><h3>
+          Votre taux de réussite pour ce quizz est de : {{finalPercent}}%
+          </h3>
+          </div>
+          <br>
+          <input class="btn btn-primary btn-lg" ng-show="resultMode" type="button" ng-click="returnToTheme()" value="Retour au choix des Themes">
+          <br>
+          		
+        <form>
+          <table ng-model=question ng-repeat = "QR in qcm" class="table table-bordered">
+            <thead>
+              <tr>
+                <th class="idQuestion">{{QR.question.id}}</th>
+                <th class="idQuestion">{{QR.question.libelleQuestion}}</th>
+              </tr>
+            </thead>
+               
+            <tbody>
+            <div class="btn-group" data-toggle="buttons" id="group1">
+              <tr ng-model="reponse" class="fondTableau" ng-repeat="reponse in QR.listReponse">
+              <div id="{{reponse.veracite}}">
+                <th scope="row" id="{{reponse.id}}">
+                <input ng-model="gridRadios" type="radio" id="gridRadiosA" 
+                 name="{{QR.question.id}}" ng-click="checkBoxSelected($parent.$index, reponse)" 
+                ng-value="reponse" ng-disabled="resultMode"></th>
+                <td id="{{reponse.id}}lib" ng-model="libelle">{{reponse.libelleReponse}}</td>
+                </div>
+              </tr>
+   			 </div>
+            </tbody>
+          </table>
+          </form>
+          <input class="btn btn-primary btn-lg" ng-show="!resultMode" type="submit" ng-click="validate()" value="Valider" id="validateButton">
+			<input class="btn btn-primary btn-lg" ng-show="resultMode" type="button" ng-click="returnToTheme()" value="Retour au choix des Themes">
+  </div>
+</div>

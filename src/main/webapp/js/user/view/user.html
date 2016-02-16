@@ -1,20 +1,23 @@
-<h2>Users</h2>
-<div ng-controller="userController">
-	<table>
-		<tr>
-			<th></th>
-			<th>Pseudo</th>
-			<th>Password</th>
-			<th></th>
-		</tr>
-		<tr ng-repeat="user in users">
-			<td><a href="#/users/{{user.id}}">{{user.id}}</a></td>
-			<td>{{user.pseudo}}</td>
-     	    <td>{{user.password}}</td>
-			<td><a href="#/delete/{{user.id}}">X</a></td>
-		</tr>
-		<tr>
-			<td colspan="3"><a href="#/new">+</a></td>
-		</tr>
-	</table>
+<div ng-hide="!correctLogin">
+	<div class="container">
+		<h2 class="form-signin-heading">Bienvenue {{user.pseudo}}</h2>
+
+		<div class="container">
+			<h3>Accés direct:</h3>
+			<div class="col-lg-8">
+				<h5>
+				<br>- <a href="#/mesNotes"> Vos notes</a><br>
+				<br>- <a href="#themes"> Entraînement</a>
+				</h5>
+			</div>
+		</div>
+		<br> <br>
+		
+		<div class="container">
+			<div  id="successMessage" class="alert alert-success" role="alert" style="display: none;">
+				<p>Suppression réussi!</p></div>
+			<button ng-click="deleteUser()" class="btn btn-lg btn-primary btn-block"s>Supprimer ce compte</button>
+		</div>
+		<br> <br>
+	</div>
 </div>

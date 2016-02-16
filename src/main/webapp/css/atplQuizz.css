@@ -457,3 +457,30 @@ footer .footer-below {
     display: none;
     opacity: 0;
 }
+
+th.idQuestion {
+    background-color: #02232B; 
+    text-align: left;
+    font-color: #00000;
+    line-width : 7%;
+}
+th.Question {
+    background-color: #02232B; 
+    text-align: left;
+}
+tr.fondTableau {
+    background-color: #FFFFCE; 
+    color : black;
+    text-align: left;
+}
+tr.success {
+    text-align: left;
+}
+tr.danger {
+    text-align: left;
+}
+div.timal{
+	text-align : center;
+	color:white;
+	backgroung: lightslategrey;
+}

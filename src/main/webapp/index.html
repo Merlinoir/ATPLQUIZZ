@@ -16,7 +16,7 @@
 
     <!-- CSS personalisé -->
     <link href="css/atplQuizz.css" rel="stylesheet">
-
+    
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
@@ -66,16 +66,22 @@
                         <a href="#page-top"></a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#login">SE CONNECTER</a>
+                        <a href="#user" ng-hide="!correctLogin">{{user.pseudo}}</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#register">S'ENREGISTRER</a>
+                        <a href="#logout" ng-hide="!correctLogin">SE DECONNECTER</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#themes" class="menuqcm" style="visibility:hidden;" >QCM</a>
+                        <a href="#login" ng-hide="correctLogin">SE CONNECTER</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#mesNotes" class="menuqcm" style="visibility:hidden;">MES NOTES</a>
+                        <a href="#register" ng-hide="correctLogin">S'ENREGISTRER</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#themes" ng-hide="!correctLogin">QCM</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#notes" ng-hide="!correctLogin">MES NOTES</a>
                     </li>
                 </ul>
             </div>
@@ -149,8 +155,7 @@
 	<script type="text/javascript" src="js/user/service/user_service.js"></script>
 	<script type="text/javascript" src="js/atplQuizzGlobalController.js"></script>
 	<script type="text/javascript" src="js/atplQuizzGlobalService.js"></script>
-	<script type="text/javascript" src="js/register/controller/registerController.js"></script>
-	<script type="text/javascript" src="js/user/controller/userController.js"></script>
+	
 	
     <!-- jQuery -->
     <script src="js/libs/jquery.js"></script>
@@ -167,9 +172,28 @@
     <!-- Custom Theme JavaScript -->
     <script src="js/libs/atplQuizz.js"></script>
     
-    <script type="text/javascript" src="js/login/controller/loginController.js"></script>
+    <!--    registration import -->  
+    <script type="text/javascript" src="js/register/controller/registerController.js"></script>
     
     
+<!--    Login import -->
+        <script type="text/javascript" src="js/login/service/loginService.js"></script>
+   		<script type="text/javascript" src="js/login/controller/loginController.js"></script>
+    
+<!--     User import -->
+    
+	<script type="text/javascript" src="js/user/controller/userController.js"></script>
+	
+<!--  Theme import  -->
+<script type="text/javascript" src="js/theme/controller/themeController.js"></script>
+<script type="text/javascript" src="js/theme/service/themeService.js"></script>
+
+<!-- 	Qcm import -->
+<script type="text/javascript" src="js/qcm/controller/qcmController.js"></script>
+<script type="text/javascript" src="js/qcm/service/qcmService.js"></script>
+
+<!--  notes import  -->
+<script type="text/javascript" src="js/note/controller/noteController.js"></script>
 
 </body>
 

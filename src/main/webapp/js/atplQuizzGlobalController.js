@@ -1,4 +1,3 @@
-//var atplQuizzAppModule = angular.module('atplQuizzApp', ['ngRoute', 'ngResource']);
 (function() {
     'use strict';
     
@@ -11,21 +10,29 @@
 //    '$rootScope', 
 //    '$state', 
 //    '$stateParams'
+    controller('first', function ($rootScope) {
+    	$rootScope.correctLogin = false;
     
+    }).
 		config(defaultRoute).
 		run(function($rootScope, $state, $stateParams) {
 			$rootScope.$state = $state;
 			$rootScope.$stateParams = $stateParams;
 		});
 		
-		defaultRoute.$inject = ['$stateProvider'];
+		defaultRoute.$inject = ['$stateProvider', '$urlRouterProvider'];
 				
-		function defaultRoute($stateProvider) {
+		function defaultRoute($stateProvider, QuestionnaireByThemeService) {
 			$stateProvider.
 				state('login', {
 					url:'/login',
 					templateUrl : 'js/login/view/login.html',
-					controller : 'userLoginController'
+					controller : 'loginController'
+				}).
+				state('logout', {
+					url:'/logout',
+					templateUrl : 'js/login/view/login.html',
+					controller : 'loginController'
 				}).
 				state('register', {
 					url:'/register',
@@ -44,17 +51,35 @@
 					templateUrl : 'js/note/view/mesNotes.html',
 					controller : 'noteController'
 				}).
-				state('users', {
-					url:'/users',
+				state('user', {
+					url:'/user',
 					templateUrl : 'js/user/view/user.html',
 					controller : 'userController'
+
 				}).
 				state('themes', {
 					url:'/themes',
 					templateUrl : 'js/theme/view/themes.html',
 					controller : 'themeController'
-				});
-				
-//			$routeProvider.otherwise('/');
+				}).
+				state('qcm', {
+					url:'/qcm/:idtheme',
+					templateUrl : 'js/qcm/view/qcm.html',
+					resolve : {
+						qcmResource : 'QuestionnaireByThemeService',
+						
+						qcm : function(qcmResource, $stateParams){
+							var params = {
+									idTheme : $stateParams.idtheme
+							}
+							
+							return qcmResource.query(params).$promise;
+						}
+					},
+				controller : 'qcmController'
+				}).
+				state("otherwise", {
+				    url: "*path"
+				});				
 		}
 })();
