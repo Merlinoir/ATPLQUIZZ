@@ -31,7 +31,7 @@ public class QcmService {
 	@Autowired
 	JdbcTemplate jdbcTemplate;
 
-	private final static int NB_QUESTIONS = 20;
+	private final static int NB_QUESTIONS = 19;
 
 	private static Log log = LogFactory.getLog(QcmService.class);
 
