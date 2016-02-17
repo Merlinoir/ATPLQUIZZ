@@ -32,13 +32,18 @@ http://www.springframework.org/schema/context/spring-context-3.0.xsd">
         <property name="dataSource" ref="dataSource"/>
         <property name="jpaVendorAdapter" ref="jpaVendorAdapter"/>
         <property name="packagesToScan" value="com.atplquiz.entity"/>
+        <property name="persistenceUnitName" value="myPersistenceUnit" />
+    </bean>
+    
+    <bean id="persistenceUnitManager" class ="org.springframework.orm.jpa.persistenceunit.DefaultPersistenceUnitManager">
+    	<property name="persistenceXmlLocation" value="classpath*:/META-INF/persistence.xml"/>
+    	<property name="defaultDataSource" value="dataSource"/>
     </bean>
 
     <bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager"/>
     
     <context:spring-configured />
     <context:annotation-config />
-    <tx:annotation-driven />
     
     <jpa:repositories base-package="com.atplquiz.repository" />
 

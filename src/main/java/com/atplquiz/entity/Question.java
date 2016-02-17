@@ -1,9 +1,17 @@
 package com.atplquiz.entity;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "QUESTION")
 public class Question {
+	
+	@Id
 	private long id;
-	private String libelleQuestion;
-	private long idTheme;
+	private String libelle_question;
+	private long id_theme;
 	
 	
 	public long getId() {
@@ -13,27 +21,27 @@ public class Question {
 		this.id = idQuestion;
 	}
 	public String getLibelleQuestion() {
-		return libelleQuestion;
+		return libelle_question;
 	}
 	public void setLibelleQuestion(String libelleQuestion) {
-		this.libelleQuestion = libelleQuestion;
+		this.libelle_question = libelleQuestion;
 	}
 	public long getIdTheme() {
-		return idTheme;
+		return id_theme;
 	}
 	public void setIdTheme(long idTheme) {
-		this.idTheme = idTheme;
+		this.id_theme = idTheme;
 	}
 	@Override
 	public String toString() {
 		return "Question [idQuestion=" + id + ", libelleQuestion="
-				+ libelleQuestion + ", idTheme=" + idTheme + "]";
+				+ libelle_question + ", idTheme=" + id_theme + "]";
 	}
 	public Question(long idQuestion, String libelleQuestion, long idTheme) {
 		super();
 		this.id = idQuestion;
-		this.libelleQuestion = libelleQuestion;
-		this.idTheme = idTheme;
+		this.libelle_question = libelleQuestion;
+		this.id_theme = idTheme;
 	}
 	public Question() {
 		

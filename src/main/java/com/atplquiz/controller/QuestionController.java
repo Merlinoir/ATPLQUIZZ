@@ -3,9 +3,12 @@ package com.atplquiz.controller;
 
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,43 +20,51 @@ import com.atplquiz.entity.Question;
 import com.atplquiz.service.QuestionService;
 
 
-@RestController
-@RequestMapping("/question")
+@Controller
+@RequestMapping("/questions")
 public class QuestionController {
 	
 
 	@Autowired
-	private QuestionService qs;
+	QuestionService qs;
 
-	
-	  @RequestMapping(value="/all", method = RequestMethod.GET)
-	  public List<Question> findAll(){
-		  return qs.findAll();
-	  }
+	// ------------ All question -------------
+	@RequestMapping(method = RequestMethod.GET, produces = "application/json; charset=utf-8")
+	public List<Question> findAll(){
+		return qs.findAll();
+	}
 
-	  @RequestMapping(value="/{id}", method = RequestMethod.GET)
-	  public List<Question> findById(@PathVariable String id){
-		  return qs.findById(id);
-	  }
+	// --------------  One Question  ----------
+	@RequestMapping(value="/{id}", method = RequestMethod.GET)
+	public Question findById(@PathVariable("id")int id){
+		return qs.findById(id);
+	}
 
+	// --------- Create -------------
+	@RequestMapping(method=RequestMethod.POST, consumes = "application/json; charset=utf-8")
+	public void createQuestion (@RequestBody Question question){
+		qs.saveQuestion(question);
+	}
 
-	  @RequestMapping(value="create", method=RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
-	  @ResponseBody
-	  public Question createQuestion (@RequestBody Question question){
-			return qs.createQuestion(question);
+	// ---------- Update ------------
+	@RequestMapping(value="/{id}", method=RequestMethod.PUT, consumes = "application/json; charset=utf-8")
+	public Question updateQuestion(@PathVariable("id") int id, @Valid @RequestBody Question question) {
+		Question q = qs.findById(id);
+		if(q == null) {
+			return null;
 		}
-
+		
+		q.setId(question.getId());
+		q.setIdTheme(question.getIdTheme());
+		q.setLibelleQuestion(question.getLibelleQuestion());
+		
+		qs.updateQuestion(q);
+		return q;
+	}
 	  
-	  @RequestMapping(value="update", method=RequestMethod.PUT, consumes = MediaType.APPLICATION_JSON_VALUE)
-	  @ResponseBody
-	  public Question updateQuestion(@RequestBody Question question){
-		  return qs.updateQuestion(question);
-	  }
-	  
-	  
-
+	// --------- Delete ------------
 	@RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
-	void deleteQuestion (@PathVariable long id) {
+	public void deleteQuestion (@PathVariable("id") int id) {
 		qs.deleteQuestion(id);
 	}
 	

@@ -7,10 +7,14 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @SpringBootApplication
 @ComponentScan(basePackages ={"com.atplquiz.controller","com.atplquiz.service"})
+@EnableTransactionManagement
+@EnableJpaRepositories(basePackages = "com.atplquiz.repository")
 public class Application implements CommandLineRunner {
 
   private static Log log = LogFactory.getLog(Application.class);
