@@ -106,7 +106,7 @@ public class QcmServiceHSQLDBTest extends ServiceHSQLDBTest {
 	public void testGenerateQuestionReponseByTheme(){
 		//GIVEN
 		//On crée 1 question avec ses 4 réponses avec le theme id 1L
-		User user = userService.createUser(UserUtils.getOneUser());
+		//User user = userService.createUser(UserUtils.getOneUser());
 		Theme theme = themeService.createTheme(ThemeUtils.getOneTheme());
 		Question question = questionService.createQuestion(QuestionUtils.getOneQuestion());
 		List<Reponse>listeReponseIdThem1L = ReponseUtils.getReponseListTrueFirst(question.getId());

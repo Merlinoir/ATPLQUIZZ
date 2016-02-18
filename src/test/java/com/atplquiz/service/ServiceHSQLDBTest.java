@@ -21,10 +21,8 @@ public abstract class ServiceHSQLDBTest {
 
 	@Before
 	public void setUp() {
-		// db = new EmbeddedDatabaseBuilder().addDefaultScripts().build();
 		dataSource = new EmbeddedDatabaseBuilder()
 				.setType(EmbeddedDatabaseType.H2).addScript("create-db.sql")
-				// .addScript("db/sql/insert-data.sql")
 				.build();
 
 		jdbcTemplate.setDataSource(dataSource);

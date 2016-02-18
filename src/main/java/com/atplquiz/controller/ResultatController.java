@@ -25,7 +25,6 @@ import com.atplquiz.service.ResultatService;
 public class ResultatController {
 	
 
-
 	@Autowired
 	ResultatService rs;
 
