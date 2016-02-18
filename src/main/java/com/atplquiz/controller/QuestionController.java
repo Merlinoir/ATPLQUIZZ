@@ -20,7 +20,7 @@ import com.atplquiz.entity.Question;
 import com.atplquiz.service.QuestionService;
 
 
-@Controller
+@RestController
 @RequestMapping("/questions")
 public class QuestionController {
 	
